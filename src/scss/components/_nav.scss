@@ -235,8 +235,8 @@ nav ul {
       background:$tertiary-color;
       display:none;
       width:auto;
-      min-width:250px;
-      border-radius:.25em;
+      min-width:100%;
+      border-radius:0em;
 
       li {
         display:flex;
@@ -250,10 +250,10 @@ nav ul {
 
       a {
         color:white;
-        padding:10px 64px 10px 20px;
+        padding:10px 20px 10px 20px;
         flex-grow:1;
         white-space:nowrap;
-        text-align:left;
+        text-align:center;
         background-color:transparent;
         border:none;
         border-radius:0;
