@@ -1,9 +1,9 @@
 {
-	"project": "nvQuickTheme",
-	"version": "1.2.0",
-	"author": "TK Sheppard &amp; David Poindexter",
+	"project": "DNNCommunityTheme",
+	"version": "1.0.0",
+	"author": "David Poindexter",
 	"company": "nvisionative",
-	"url": "www.nvquicktheme.com",
+	"url": "www.nvisionative.com",
     "email": "support@nvisionative.com",
-    "description": "A DNN Theme Dev Framework"
+    "description": "A DNN Theme by and for the DNN Community"
 }

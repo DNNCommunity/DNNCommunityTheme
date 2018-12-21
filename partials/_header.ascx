@@ -1,11 +1,11 @@
 <header class="bg-light-grey">
-  <div class="container-fluid user-controls bg-tertiary">
+  <div class="container-fluid user-controls bg-primary">
     <div class="container">
       <div class="row justify-content-end">
         <ul>
           <li><dnn:Login runat="server" id="dnnLogin" /></li>
           <li><dnn:User runat="server" id="dnnUser" /></li>
-          <li><dnn:Search runat="server" id="dnnSearch" ShowSite="false" ShowWeb="false" Submit="<i class='fa fa-search'></i>" /></li>
+          <li style="display:none;"><dnn:Search runat="server" id="dnnSearch" ShowSite="false" ShowWeb="false" Submit="<i class='fa fa-search'></i>" /></li>
           <li style="display:none;"><dnn:Language runat="server" id="dnnLanguage" ShowMenu="false" ShowLinks="false" /></li>
         </ul>
       </div>
