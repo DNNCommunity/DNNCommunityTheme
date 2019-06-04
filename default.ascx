@@ -16,7 +16,7 @@
 
   <div class="container">
     <div class="row justify-content-center">
-      <div id="ContentPane" class="col-md-8 text-center" runat="server"></div> 
+      <div id="ContentPane" class="col-md-12" runat="server"></div> 
     </div>
   </div>
 
