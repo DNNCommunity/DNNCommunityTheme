@@ -1,0 +1,29 @@
+menu:
+  - title: Table of Contents
+    subfolderitems:
+      - page: Home
+        url: /nvQuickTheme/
+      - page: Installation
+        url: /nvQuickTheme/Installation.html
+      - page: Project Setup
+        url: /nvQuickTheme/Project-Setup.html
+      - page: Commands
+        url: /nvQuickTheme/Commands.html
+  - title: Appendix
+    subfolderitems:
+      - page: Dependencies
+        url: /nvQuickTheme/Dependencies.html
+      - page: Dev Dependencies
+        url: /nvQuickTheme/DevDependencies.html
+      - page: SCSS
+        url: /nvQuickTheme/SCSS.html
+  - title: How To...
+    subfolderitems:
+      - page: Work With Out-Of-Box Theme
+        url: /nvQuickTheme/Work-With-Out-Of-Box-Theme.html
+      - page: Change Color Scheme
+        url: /nvQuickTheme/Change-Color-Scheme.html
+      - page: Add Custom Theme Release Notes
+        url: /nvQuickTheme/Add-Custom-Theme-Release-Notes.html
+      - page: Add Custom Theme License
+        url: /nvQuickTheme/Add-Custom-Theme-License.html
