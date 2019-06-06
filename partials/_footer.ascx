@@ -6,7 +6,7 @@
       <div id="FooterPaneThree" class="col-md-4" runat="server"></div>
     </div>
   </div>
-  <div class="container-fluid bg-tertiary disclaimer">
+  <div class="container-fluid bg-secondary disclaimer">
     <div class="container">
       <ul>
         <li><dnn:COPYRIGHT id="dnnCopyright" runat="server" /></li>

@@ -26,6 +26,10 @@
   &[class*="-tertiary"] {
     background-color:$tertiary-color;
   }
+  &[class*="-grey"] {
+    background-color:$grey;
+    color:$font-color;
+  }
   &[class*="-light-grey"] {
     background-color:$light-grey;
     color:$font-color;

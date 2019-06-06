@@ -10,8 +10,8 @@
 
 .btn-primary, .btn-secondary {
   &:hover, &:active, &:focus {
-    background-color:$tertiary-color !important;
-    border-color:$tertiary-color !important;
+    background-color:$secondary-color !important;
+    border-color:$secondary-color !important;
     box-shadow:none !important;
   }
 }
@@ -34,7 +34,7 @@
   
   ~ .sub-toggle {
     @extend .btn;
-    @extend .btn-primary;
+    @extend .btn-secondary;
     border-top-right-radius:.25rem;
     border-bottom-right-radius:.25rem;
     margin-left:1px;
