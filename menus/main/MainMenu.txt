@@ -6,9 +6,9 @@
     <li[?SELECTED] class="active"[/?]>
       
       [?ENABLED]
-        <a href="[=URL]" class="btn btn-primary[?NODE] split[/?]">[=TEXT]</a>
+        <a href="[=URL]" class="btn btn-secondary[?NODE] split[/?]">[=TEXT]</a>
       [?ELSE]    
-        <a href="#" class="btn btn-primary[?NODE] single[/?]">[=TEXT]</a>
+        <a href="#" class="btn btn-secondary[?NODE] single[/?]">[=TEXT]</a>
       [/?]
       
       [?NODE]

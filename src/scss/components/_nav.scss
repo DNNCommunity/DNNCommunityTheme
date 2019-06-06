@@ -41,10 +41,10 @@
       line-height:1.5;
       border:1px solid transparent;
       display:inline-flex;
-      color:white;
+      color:$secondary-color;
       
       &:hover, &:focus {
-        color:$secondary-color;
+        color:$tertiary-color;
       }
     }
     
@@ -145,7 +145,7 @@ nav ul {
       left:0;
       top:calc(100% + 1px);
       z-index:999;
-      background:$tertiary-color;
+      background:$secondary-color;
       display:none;
       width:auto;
       border-radius:.25em;
@@ -196,7 +196,7 @@ nav ul {
 
         /* Under 2 */
         ul {
-          background:$tertiary-color;
+          background:$secondary-color;
           position: absolute;
           left:calc(100% + 1px);
           top: 0;
