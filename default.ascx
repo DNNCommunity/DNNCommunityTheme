@@ -22,7 +22,7 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container py-4">
     <div class="row justify-content-center">
       <div id="ContentPane" class="col-md-12" runat="server"></div> 
     </div>
