@@ -232,7 +232,7 @@ nav ul {
       right:0;
       top:calc(100% + 1px);
       z-index:999;
-      background:$tertiary-color;
+      background:$secondary-color;
       display:none;
       width:auto;
       min-width:100%;
@@ -275,7 +275,7 @@ nav ul {
       > li {
         /* Under 2 */
         ul {
-          background:$tertiary-color;
+          background:$font-color;
           position:relative;
           display:none;
           width:100%;
@@ -287,6 +287,7 @@ nav ul {
             }
             /* Under 3 */
             ul {
+              background:$dark-grey;
               position:relative;
               left:auto;
               
@@ -296,6 +297,7 @@ nav ul {
                 }
                 /* Under 4 */
                 ul {
+                  background:$dark-blue;
                   position:relative;
                   left:auto;
 
@@ -317,7 +319,7 @@ nav ul {
         right:0;
         width:44px;
         height:44px;
-        background-color:$tertiary-color;
+        background-color:$secondary-color;
         border-radius:0 !important;
         
         &:before {
