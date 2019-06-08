@@ -30,8 +30,8 @@
 
   <div class="container">
     <div class="row">
-      <div id="DoublePaneOneOne" class="col-md-6 cpr-5" runat="server"></div>
-      <div id="DoublePaneOneTwo" class="col-md-6 bg-light-grey cp-5" runat="server"></div>
+      <div id="WideLeftPane" class="col-md-8 cpr-5" runat="server"></div>
+      <div id="NarrowRightPane" class="col-md-4 bg-light-grey cp-5" runat="server"></div>
     </div>
   </div>   
 
