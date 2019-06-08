@@ -8,3 +8,13 @@
     padding-bottom:6rem;
   }
 }
+
+#dnn_BannerPane a {
+  color: #fff;
+  font-weight: bold;
+}
+
+#dnn_BannerPane a:hover {
+  color: $light-grey;
+  font-weight: bold;
+}
