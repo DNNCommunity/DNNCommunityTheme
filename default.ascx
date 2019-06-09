@@ -6,6 +6,12 @@
 
 <!-- Main Content -->
 <main>
+    <div class="container-fluid fullwidthpane">
+    <div class="row">
+        <div id="FullwidthPane" class="col-md-12" runat="server"></div>
+      </div>
+    </div>
+  
   <div class="container-fluid bannerpane bg-tertiary my-0">
     <div class="container my-0">
       <div class="row justify-content-center">
