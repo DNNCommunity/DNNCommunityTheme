@@ -9,6 +9,18 @@
   }
 }
 
+.bannerTitle {
+  font-weight: bold;
+  font-size: 5em;
+  text-shadow: 0 0 5px $secondary-color;
+}
+
+.bannerSubTitle {
+  font-weight: bold;
+  font-size: 3em;
+  text-shadow: 0 0 5px $secondary-color;
+}
+
 #dnn_BannerPane a {
   color: #fff;
   font-weight: bold;

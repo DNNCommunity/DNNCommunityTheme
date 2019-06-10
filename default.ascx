@@ -6,6 +6,12 @@
 
 <!-- Main Content -->
 <main>
+  <div class="container-fluid bannerpane px-0 mb-0">
+    <div class="justify-content-center">
+      <div id="BannerFluidPane" class="text-center" runat="server"></div>
+    </div>
+  </div>
+
   <div class="container-fluid bannerpane bg-tertiary my-0">
     <div class="container my-0">
       <div class="row justify-content-center">
