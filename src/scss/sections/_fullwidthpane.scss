@@ -1,0 +1,12 @@
+#dnn_FullwidthPane [class*=DNNContainer] {
+    padding: 0 !important;
+   }
+
+.container-fluid {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+main div.container, main div.container-fluid {
+    margin-bottom: 0 !important;
+}
