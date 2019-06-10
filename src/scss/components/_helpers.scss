@@ -34,6 +34,9 @@
     background-color:$light-grey;
     color:$font-color;
   }
+  &[class*="-banner-transparent"] {
+    background-color:rgba($secondary-color, $alpha: 0.2);
+  }
   pre {
     background:white;
   }
