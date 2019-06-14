@@ -8,10 +8,18 @@
   border-color:$secondary-color;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary {
   &:hover, &:active, &:focus {
-    background-color:$secondary-color !important;
-    border-color:$secondary-color !important;
+    background-color:$tertiary-color !important;
+    border-color:$tertiary-color !important;
+    box-shadow:none !important;
+  }
+}
+
+.btn-secondary {
+  &:hover, &:active, &:focus {
+    background-color:$tertiary-color !important;
+    border-color:$tertiary-color !important;
     box-shadow:none !important;
   }
 }
