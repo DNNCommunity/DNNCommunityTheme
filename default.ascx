@@ -12,7 +12,7 @@
     </div>
   </div>
 
-  <div class="container-fluid bannerpane bg-tertiary my-0">
+  <div class="container-fluid bannerpane bg-primary my-0">
     <div class="container my-0">
       <div class="row justify-content-center">
         <div id="BannerPane" class="col-md-12 text-center" runat="server"></div>
