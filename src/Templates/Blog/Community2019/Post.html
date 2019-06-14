@@ -1,0 +1,37 @@
+<article class="bbs-listarticle">
+  <div class="supertitle">[subtemplate|Cat.html|categories]</div>
+  <h2><a href="[Post:link]">[post:localizedtitle]</a></h2>
+  <div class="row">
+    <div class="col-md-4">
+      [subtemplate|ListImage.html|post:hasimage]
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-md-12">
+          [post:localizedsummary]
+        </div>
+      </div>
+      <div class="col-md-12">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="[urls:module|true]author=[post:CreatedByUserID]">[post:DisplayName]</a>
+          </li>
+          <li class="list-inline-item">[subtemplate|Kw.html|keywords]</li>
+          <li class="list-inline-item">
+            <div data-time="[post:PublishedOnDate|yyyy-MM-dd HH:mm:ss]" class="moment">[post:PublishedOnDate|yyyy-MM-dd]
+            </div>
+          </li>
+          <li class="list-inline-item"><i class="glyphicon glyphicon-eye-open"></i>
+            <div class="stat" title="[post:viewcount] [resx:Views]">[post:viewcount]</div>
+          </li>
+          <li class="list-inline-item"><i class="glyphicon glyphicon-comment"></i>
+            <div class="stat" title="[post:nrcomments] [resx:Comments]">[post:nrcomments]</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="clear"></div>
+    [if|1][Post:published][=]False[/if]
+    <div class="bg-danger">[resx:Unpublished]</div>
+    [endif|1]
+  </div>
+</article>

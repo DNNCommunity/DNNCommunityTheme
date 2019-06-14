@@ -63,6 +63,10 @@ var paths = {
     src: './src/js/*.js',
     dest: './dist/js/'
   },
+  templatesBlog: {
+    src: './src/Templates/Blog/**/*',
+    dest: './dist/Templates/Blog/'
+  },
   containers: {
     src: './containers/*',
     dest: '../../Containers/'+project+'/'
@@ -213,6 +217,18 @@ function scripts() {
 /* END SCRIPTS TASKS -----------------------------------*/
 /*------------------------------------------------------*/
 
+/*------------------------------------------------------*/
+/* BLOG TEMPLATES TASKS --------------------------------*/
+/*------------------------------------------------------*/
+// Copy Blog templates to dist/Templates/Blog
+function templatesBlog() {
+  return gulp.src(paths.templatesBlog.src)
+    .pipe(gulp.dest(paths.templatesBlog.dest))
+    .pipe(notify({message: '<%= file.relative %> distributed!', title : 'templatesBlog', sound: false}));
+}
+/*------------------------------------------------------*/
+/* END BLOG TEMPLATES TASKS ----------------------------*/
+/*------------------------------------------------------*/
 
 /*------------------------------------------------------*/
 /* DNN TASKS -------------------------------------------*/
@@ -306,6 +322,7 @@ function watch() {
   gulp.watch(paths.images.src, images);
   gulp.watch(paths.styles.src, styles);
   gulp.watch(paths.scripts.src, scripts);
+  gulp.watch(paths.templatesBlog.src, templatesBlog);
   gulp.watch(paths.containers.src, containers);
 }
 
@@ -313,7 +330,7 @@ function watch() {
 var init = gulp.series(fontsInit, faFontsInit, faCssInit, slimMenuInit, normalizeInit, bsCssInit, bsJsInit);
 
 // gulp build
-var build = gulp.series(init, styles, scripts, images, containers, manifest);
+var build = gulp.series(init, styles, scripts, templatesBlog, images, containers, manifest);
 
 // gulp package
 var package = gulp.series(build, ziptemp, zippackage, cleanup);
@@ -336,6 +353,7 @@ exports.bsJsInit = bsJsInit;
 exports.images = images;
 exports.styles = styles;
 exports.scripts = scripts;
+exports.templatesBlog = templatesBlog;
 exports.containers = containers;
 exports.manifest = manifest;
 exports.zipdist = zipdist;

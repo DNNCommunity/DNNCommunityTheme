@@ -1,0 +1,75 @@
+<div class="blog-main-content">
+  <span class="removeselection"><a href="[query:referrer]" title="[resx:Back]"><i
+        class="fa fa-arrow-up icon16"></i></a></span>
+  <article id="post-[post:contentitemid]" class="bbs-article">
+    <header>
+      <div class="supertitle">[subtemplate|Cat.html|categories]</div>
+      <h1>[Post:localizedtitle]</h1>
+    </header>
+    <div class="row">
+      <div class="col-md-12">
+        [subtemplate|Postbanner.html|Post:hasimage]
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="clearfix"><strong>[resx:WrittenBy]</strong> [post:DisplayName]
+          <div data-time="[post:PublishedOnDate|yyyy-MM-dd HH:mm:ss]" class="momentabs">
+            [post:PublishedOnDate|yyyy-MM-dd]</div>
+        </div>
+        <hr />
+        [Post:localizedcontent]
+      </div>
+      <div class="col-md-4 dnnc-blog-metadata">
+        <div class="row">
+          <div class="col-md-12">
+            <h5>[resx:PublishedOn]</h5>
+            <div data-time="[post:PublishedOnDate|yyyy-MM-dd HH:mm:ss]" class="momentabs">
+              [post:PublishedOnDate|yyyy-MM-dd]</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h5>[resx:Share]</h5>
+            <div id="sharrre" data-url="[post:link]" data-text="share"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h5>[resx:WrittenBy]</h5>
+            <div class="row">
+              <div class="col-md-12">
+                <img src="/dnnimagehandler.ashx?mode=profilepic&amp;userid=[Author:UserId]&amp;w=120"
+                  class="img-fluid" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <a href="[urls:module|true]author=[post:CreatedByUserID]">[post:DisplayName]</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                [Author:Biography]
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h5>[resx:Tags]</h5>
+            [subtemplate|PostTag.html|categories]
+            [subtemplate|PostTag.html|keywords]
+          </div>
+        </div>
+        [if|1][Post:published][=]False[/if]
+        <div class="row">
+          <div class="col-md-12">
+            <span class="unpublished bg-danger">[resx:Unpublished]</span>
+          </div>
+        </div>
+        [endif|1]
+      </div>
+    </div>
+  </article>
+</div>
