@@ -1,4 +1,4 @@
-<header class="bg-secondary">
+<header class="bg-secondary sticky-top">
   <div class="container-fluid user-controls bg-light-grey">
     <div class="container">
       <div class="row justify-content-end">
