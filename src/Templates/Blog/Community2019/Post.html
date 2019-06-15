@@ -11,20 +11,22 @@
           [post:localizedsummary]
         </div>
       </div>
-      <div class="col-md-12">
+      <div class="col-md-12 dnnc-list-meta">
         <ul class="list-inline">
-          <li class="list-inline-item"><a href="[urls:module|true]author=[post:CreatedByUserID]">[post:DisplayName]</a>
+          <li class="list-inline-item"><a href="[urls:module|true]author=[post:CreatedByUserID]"><i class="fa fa-user"
+                aria-hidden="true"></i>[post:DisplayName]</a>
           </li>
           <li class="list-inline-item">[subtemplate|Kw.html|keywords]</li>
-          <li class="list-inline-item">
+          <li class="list-inline-item"><i class="fa fa-calendar"></i>
             <div data-time="[post:PublishedOnDate|yyyy-MM-dd HH:mm:ss]" class="moment">[post:PublishedOnDate|yyyy-MM-dd]
             </div>
           </li>
-          <li class="list-inline-item"><i class="glyphicon glyphicon-eye-open"></i>
+          <li class="list-inline-item"><i class="fa fa-eye"></i>
             <div class="stat" title="[post:viewcount] [resx:Views]">[post:viewcount]</div>
           </li>
-          <li class="list-inline-item"><i class="glyphicon glyphicon-comment"></i>
-            <div class="stat" title="[post:nrcomments] [resx:Comments]">[post:nrcomments]</div>
+          <li class="list-inline-item"><i class="fa fa-comment"></i>
+            <div class="stat" title="[post:nrcomments] [resx:Comments]">[post:nrcomments]
+            </div>
           </li>
         </ul>
       </div>

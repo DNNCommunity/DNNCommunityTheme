@@ -272,3 +272,7 @@ a i {
     margin-top: 0.5em;
     margin-bottom: 1em;
 }
+
+.dnnc-list-meta div.stat, .dnnc-list-meta div.moment {
+    display: inline;
+}
