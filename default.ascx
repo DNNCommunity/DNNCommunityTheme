@@ -12,22 +12,6 @@
     </div>
   </div>
 
-  <div class="container-fluid bannerpane bg-primary my-0">
-    <div class="container my-0">
-      <div class="row justify-content-center">
-        <div id="BannerPane" class="col-md-12 text-center" runat="server"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container-fluid bannerpane bg-light-grey my-0">
-    <div class="container my-0">
-      <div class="row justify-content-center">
-        <div id="SubBannerPane" class="col-md-12 text-center" runat="server"></div>
-      </div>
-    </div>
-  </div>
-
   <div class="container py-4">
     <div class="row justify-content-center">
       <div id="ContentPane" class="col-md-12" runat="server"></div> 
