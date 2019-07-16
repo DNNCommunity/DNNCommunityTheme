@@ -20,10 +20,25 @@
 
   <div class="container">
     <div class="row">
+      <div id="FirstLeftHalfPane" class="col-md-6" runat="server"></div>
+      <div id="FirstRightHalfPane" class="col-md-6" runat="server"></div>
+    </div>
+  </div>   
+
+  <div class="container">
+    <div class="row">
       <div id="WideLeftPane" class="col-md-8 cpr-5" runat="server"></div>
       <div id="NarrowRightPane" class="col-md-4 bg-light-grey cp-5" runat="server"></div>
     </div>
   </div>   
+
+  <div class="container">
+    <div class="row">
+      <div id="SecondLeftHalfPane" class="col-md-6" runat="server"></div>
+      <div id="SecondRightHalfPane" class="col-md-6" runat="server"></div>
+    </div>
+  </div>   
+
 
   <div class="container-fluid bg-primary">
     <div class="container">
