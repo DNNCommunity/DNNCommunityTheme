@@ -27,9 +27,9 @@
 
 <div class="container">
     <div class="row">
-        <div id="ThirdcolumnPaneOne" class="col-md-4" runat="server"></div>
-        <div id="ThirdcolumnPaneTwo" class="col-md-4" runat="server"></div>
-        <div id="ThirdcolumnPaneThree" class="col-md-4" runat="server"></div>
+        <div id="LeftThirdPane1" class="col-md-4" runat="server"></div>
+        <div id="CenterThirdPane1" class="col-md-4" runat="server"></div>
+        <div id="RightThirdPane1" class="col-md-4" runat="server"></div>
     </div>
   </div>
 
