@@ -25,6 +25,14 @@
     </div>
   </div>   
 
+<div class="container">
+    <div class="row">
+        <div id="LeftThirdPane1" class="col-md-4" runat="server"></div>
+        <div id="CenterThirdPane1" class="col-md-4" runat="server"></div>
+        <div id="RightThirdPane1" class="col-md-4" runat="server"></div>
+    </div>
+  </div>
+
   <div class="container-fluid bg-primary">
     <div class="container">
       <div class="row align-items-center">
