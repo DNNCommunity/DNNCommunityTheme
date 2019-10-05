@@ -20,12 +20,26 @@
 
   <div class="container">
     <div class="row">
+      <div id="LeftHalfPane1" class="col-md-6" runat="server"></div>
+      <div id="RighttHalfPane1" class="col-md-6" runat="server"></div>
+    </div>
+  </div> 
+  
+  <div class="container">
+    <div class="row">
       <div id="WideLeftPane" class="col-md-8 cpr-5" runat="server"></div>
       <div id="NarrowRightPane" class="col-md-4 bg-light-grey cp-5" runat="server"></div>
     </div>
   </div>   
 
-<div class="container">
+ <div class="container">
+    <div class="row">
+      <div id="LeftHalfPane2" class="col-md-6" runat="server"></div>
+      <div id="RightHalfPane2" class="col-md-6" runat="server"></div>
+    </div>
+  </div>   
+  
+  <div class="container">
     <div class="row">
         <div id="LeftThirdPane1" class="col-md-4" runat="server"></div>
         <div id="CenterThirdPane1" class="col-md-4" runat="server"></div>
