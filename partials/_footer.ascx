@@ -6,7 +6,7 @@
       <div id="FooterPaneThree" class="col-md-4" runat="server"></div>
     </div>
   </div>
-  <div class="container-fluid"><p class="text-center">Website content submitted by community members remain the sole property of the respective community member.</p></div>
+  <div class="container-fluid"><p class="text-center">Website content submitted by community members remain the property and responsibility of the respective community member.</p></div>
   <div class="container-fluid bg-secondary disclaimer">
     <div class="container">
       <ul>
