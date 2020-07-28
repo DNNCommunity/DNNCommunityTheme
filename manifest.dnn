@@ -1,6 +1,6 @@
 <dotnetnuke type="Package" version="9.0">
   <packages>
-    <package name="nvisionative.DNNCommunityTheme" type="Skin" version="1.0.10">
+    <package name="nvisionative.DNNCommunityTheme" type="Skin" version="1.0.11">
       <friendlyName>DNNCommunityTheme</friendlyName>
       <description>A DNN Theme by and for the DNN Community</description>
       <iconFile>MyIcon.png</iconFile>
