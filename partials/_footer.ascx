@@ -6,7 +6,10 @@
       <div id="FooterPaneThree" class="col-md-4" runat="server"></div>
     </div>
   </div>
-  <div class="container-fluid"><p class="text-center">Website content submitted by community members remain the property and responsibility of the respective community member.</p></div>
+  <div class="container-fluid">
+    <p class="text-center mb-1">Website content submitted by community members remain the property and responsibility of the respective community member.</p>
+    <p class="text-center">Our community proudly adopts and enforces the <a href="https://dotnetfoundation.org/about/code-of-conduct" target="_blank">.NET Foundation Code of Conduct</a>.</p>
+  </div>
   <div class="container-fluid bg-secondary disclaimer">
     <div class="container">
       <ul>
