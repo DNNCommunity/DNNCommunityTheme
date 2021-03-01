@@ -7,6 +7,7 @@
     </div>
   </div>
   <div class="container-fluid">
+    <p class="text-center mb-1">To ensure you receive website notifications, please be sure to add no-reply@dnncommunity.org to your address book.</p>
     <p class="text-center mb-1">Website content submitted by community members remain the property and responsibility of the respective community member.</p>
     <p class="text-center">Our community proudly adopts and enforces the <a href="https://dotnetfoundation.org/about/code-of-conduct" target="_blank">.NET Foundation Code of Conduct</a>.</p>
   </div>
