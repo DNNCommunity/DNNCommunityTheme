@@ -7,7 +7,7 @@
   "license": "GPL-3.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "^4.5.3",
+    "bootstrap": "^4.6.2",
     "font-awesome": "^4.7.0",
     "normalize.css": "^8.0.1"
   },
