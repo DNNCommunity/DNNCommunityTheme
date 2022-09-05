@@ -1,3 +1,14 @@
 <div id="authorList[module:moduleid]" class="authorList_list">
-    [subtemplate|Author.html|authors]
+    [if|1][query:postselected][=]False[/if]
+        <h2>Blog Authors</h2>
+        [subtemplate|Author.html|authors]
+    [endif|1]
+    [if|2][query:postselected][=]True[/if]
+        <script lang="javascript">
+            var moduleId = [module:moduleid];
+            document.querySelector('.DnnModule-' + moduleId).remove();
+            document.querySelector('#dnn_WideLeftPane').classList.replace('col-lg-8', 'col-auto');
+            document.querySelector('#dnn_NarrowRightPane').classList.replace('col-lg-4', 'col');
+        </script>
+    [endif|2]
 </div>
