@@ -27,8 +27,8 @@
   
   <div class="container">
     <div class="row">
-      <div id="WideLeftPane" class="col-md-8 cpr-5" runat="server"></div>
-      <div id="NarrowRightPane" class="col-md-4 bg-light-grey cp-5" runat="server"></div>
+      <div id="WideLeftPane" class="col-lg-8 cpr-5" runat="server"></div>
+      <div id="NarrowRightPane" class="col-lg-4 bg-light-grey cp-5" runat="server"></div>
     </div>
   </div>   
 
