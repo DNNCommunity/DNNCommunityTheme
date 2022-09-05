@@ -1,7 +1,7 @@
 var gulp          = require('gulp'),
     autoprefixer  = require('gulp-autoprefixer'),
     jshint        = require('gulp-jshint'),
-    sass          = require('gulp-sass'),
+    sass          = require('gulp-sass')(require('sass')),
     imagemin      = require('gulp-imagemin'),
     rename        = require('gulp-rename'),
     uglify        = require('gulp-uglify'),
