@@ -13,11 +13,9 @@
   </div>
   <div class="container-fluid">
     <div class="container">
-      <div class="row justify-content-between flex-nowrap">
-      	<div class="col-auto">
-	        <dnn:LOGO id="dnnLOGO" runat="server" />
-		</div>
-		<div class="col-auto ms-auto d-none d-xl-block">
+      <div class="row nav-main">
+        <dnn:LOGO id="dnnLOGO" runat="server" />
+        <div class="col-auto ms-auto d-none d-xl-block">
           <dnn:MENU id="menu_desktop" MenuStyle="menus/desktop" runat="server" NodeSelector="*,0,2"></dnn:MENU>
         </div>
         <div class="col-auto ms-auto d-flex align-items-center d-xl-none">
