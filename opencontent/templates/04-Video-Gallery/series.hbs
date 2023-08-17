@@ -1,0 +1,64 @@
+<div id="oc-videos-{{Context.ModuleId}}" class="oc-videos list detail text-below">
+{{#if Context.IsEditable}}<div class="itembar"> <a href="{{Context.EditUrl}}"><i class="fa fa-pencil" aria-hidden="true"></i></a></div>{{/if}}
+	<header class="item">
+	<h1 class="title">{{Series.Title}}</h1>
+	<div class="Text">
+		{{Series.Text}}
+	</div>
+	
+		{{#if @root.Settings.Texts.BackTop}}
+		<a href="{{@root.Context.MainUrl}}" class="btn btn-default">{{@root.Settings.Texts.BackToList}}</a>
+		{{/if}}
+	</header>
+	<section>
+		<div class="row">
+				
+					{{#each Videos}}
+					
+						<div class="item col col-12 
+						
+						{{#if @root.Settings.Style.Item.sm}}
+							col-sm-{{@root.Settings.Style.Item.sm}}
+						{{/if}}
+						{{#if @root.Settings.Style.Item.md}}
+							col-md-{{@root.Settings.Style.Item.md}}
+						{{/if}}
+						{{#if @root.Settings.Style.Item.lg}}
+							col-lg-{{@root.Settings.Style.Item.lg}}
+						{{/if}}
+						{{#if @root.Settings.Style.Item.xl}}
+							col-xl-{{@root.Settings.Style.Item.xl}}
+						{{/if}}
+						{{#if @root.Settings.Style.Item.xxl}}
+							col-xxl-{{@root.Settings.Style.Item.xxl}}
+						{{/if}}
+						">
+						
+
+						<div class="wrap-content">
+							<header>
+							<h2 class="title">{{Title}}</h2>
+							<div class="text">
+							</div>
+							</header>
+							
+							<section>
+								<div class="oc-Video video video-16-9">
+									<iframe width="1280" height="720" loading="lazy" src="https://www.youtube{{#if @root.Settings.Options.NoCookies}}-nocookie{{/if}}.com/embed/{{YouTubeId}}?rel={{#if @root.Settings.Options.Related}}1{{else}}0{{/if}}&amp;controls={{#if @root.Settings.Options.Controls}}1{{else}}0{{/if}}&amp;fs={{#if @root.Settings.Options.Fullscreen}}1{{else}}0{{/if}}&amp;modestbranding={{#if @root.Settings.Options.Modestbranding}}1{{else}}0{{/if}}" frameborder="0" allowfullscreen></iframe>
+								</div>
+							</section>
+							</div>
+						</div>
+						{{/each}}
+
+		
+		</div>
+</section>
+	<footer>
+		{{#if @root.Settings.Texts.BackBottom}}
+		<a href="{{@root.Context.MainUrl}}" class="btn btn-default">{{@root.Settings.Texts.BackToList}}</a>
+		{{/if}}
+	</footer>
+</div>
+
+

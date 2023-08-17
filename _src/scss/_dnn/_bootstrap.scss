@@ -1,0 +1,7 @@
+// Bootstrap also uses the .mark class, so the DNN checkboxes pick up the background color defined inb BS.
+.dnnForm {
+    .mark{
+        background: none;
+        padding: 0;
+    }
+}

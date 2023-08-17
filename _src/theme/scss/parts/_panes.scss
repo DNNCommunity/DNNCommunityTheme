@@ -1,0 +1,42 @@
+
+// Panes
+.panes{
+
+
+    // Hide wrappers containing only empty panes in view mode
+    &.panes-empty{
+        body:not(.dnnEditState) &{
+            display: none;
+            .DNNEmptyPane {
+                min-height: 0 !important;
+
+            }
+        }
+
+        
+    }
+}
+
+
+// When editing content or setings amke the empty pane 0 height to avoid extra spacing, based on class injected by StyleHelper
+body.PageType_Edit {
+    .DNNEmptyPane {
+        min-height: 0 !important;
+    }
+}
+
+
+.pane {
+
+    // padding: 0 0 1.5em;
+
+    &.DNNEmptyPane {
+
+        padding: 0;
+    }
+
+    &.dnnSortable{
+        margin-bottom: 1.5em;
+    }
+}
+

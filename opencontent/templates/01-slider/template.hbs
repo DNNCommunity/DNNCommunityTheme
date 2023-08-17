@@ -1,0 +1,82 @@
+{{registerscript "flexslider/jquery.flexslider-min.js"}}
+{{registerstylesheet "flexslider/flexslider.css"}}
+
+
+<div id="flexslider-slider-{{Context.ModuleId}}" class="flexslider flex-slider height{{Settings.height}}"
+     data-animationloop="{{#if Settings.animationLoop}}true{{else}}false{{/if}}"
+     data-slideshow="{{#if Settings.slideshow}}true{{else}}false{{/if}}"
+     data-animation="{{Settings.slider.animation}}"
+     data-touch="{{#if Settings.slider.touch}}true{{else}}false{{/if}}"
+     data-controlnav="{{#if Settings.slider.controlNav}}true{{else}}false{{/if}}"
+     data-directionnav="{{#if Settings.slider.directionNav}}true{{else}}false{{/if}}"
+	 data-slideshowspeed="{{Settings.pause}}" 
+     {{#if Settings.carousel.show}} data-sync="#flexslider-carousel-{{Context.ModuleId}}" {{/if}}>
+    <ul class="slides">
+        {{#each Slides}}
+			{{#if Enabled}}
+			
+			<li class="slide">
+			
+				<div class="img">
+				
+					{{#equal @root.Settings.height "auto"}}
+					
+						<img srcset="{{Image.url}}?width=1000 500w, {{Image.url}}?width=1500 1500w, {{Image.url}} 2500w" src="{{Image.url}}?width=750" />
+
+					{{else}}
+
+						<img srcset="{{Image.cropUrl}}?width=1000 500w, {{Image.cropUrl}}?width=1500 1500w, {{Image.cropUrl}} 2500w" src="{{Image.cropUrl}}?width=750" />
+
+					{{/equal}}
+					
+					
+				{{#ifor Title Description}}
+					<div class="text-wrap">
+						<div class="container h-{{TextPositionH}} v-{{TextPositionV}}">
+						
+							<div class="text fade">
+							{{!  If there's a text render a button if not make the whole block a Link}}
+							
+							{{#if Link.Url}}
+							
+								{{#if Link.Text}} 
+								{{#if Title}}
+									<h2 class="flex-title">{{Title}}</h2>{{/if}}
+									{{#if Description}}<div class="flex-description">{{Description}}</div>{{/if}}
+									<div class="button">
+										<a class="btn btn-primary" href="{{Link.Url}}">{{Link.Text}}</a>
+									</div>
+									
+								{{else}}
+									<a href="{{Link.Url}}">
+									{{#if Title}}<h2 class="flex-title">{{Title}}</h2>{{/if}}
+									{{#if Description}}<div class="flex-description">{{Description}}</div>{{/if}}
+									</a>
+									
+								{{/if}}
+							
+							{{else}}
+									{{#if Title}}<h2 class="flex-title">{{Title}}</h2>{{/if}}
+									{{#if Description}}<div class="flex-description">{{Description}}</div>{{/if}}
+							{{/if}}
+							
+
+							
+							</div>
+							
+						</div>
+					</div>
+				{{/ifor}}
+				</div>
+				
+			</li>
+			
+			{{/if}}
+        {{/each}}
+    </ul>
+</div>
+
+<script>
+	jQuery(".flexslider").after(jQuery("[id$=View_pDemo]"));
+</script>
+

@@ -1,0 +1,63 @@
+// Font 
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+$font-family-base: 'Mulish', sans-serif;
+
+
+// DNN colors
+
+$dnn-blue: #1ea3dc;
+$dnn-red: #ef3d43;
+
+
+
+// overrrule BS5 Colors
+$col1: $dnn-blue !default;
+
+// Get the main color Hue
+$col1-hue: hue($col1);
+$col-sat: saturation($col1);
+
+
+
+$col1-100: hsl($col1-hue, $col-sat, 90%);
+$col1-200: hsl($col1-hue, $col-sat, 80%);
+$col1-300: hsl($col1-hue, $col-sat, 70%);
+$col1-400: hsl($col1-hue, $col-sat, 60%);
+$col1-500: hsl($col1-hue, $col-sat, 50%);
+$col1-600: hsl($col1-hue, $col-sat, 40%);
+$col1-700: hsl($col1-hue, $col-sat, 30%);
+$col1-800: hsl($col1-hue, $col-sat, 20%);
+$col1-900: hsl($col1-hue, $col-sat, 10%);
+
+$red: $dnn-red !default;
+
+$primary: $col1;
+$secondary: $col1-700;
+
+// BS5 Gray
+$white:    #fff;
+$gray-100: #e1edf2;
+$gray-200: #d5e1e5;
+$gray-300: #bec8cc;
+$gray-400: #a6afb3;
+$gray-500: #777d80;
+$gray-600: #5f6466;
+$gray-700: #474b4d;
+$gray-800: #2f3233;
+$gray-900: #18191a;
+$black:    #000;
+
+// Menu
+// Menu
+$dropdown-spacer: 0;
+$dropdown-bg: $col1-700;
+$dropdown-border-color: none;
+$dropdown-border-radius: 0;
+$dropdown-border-width: 0;
+$dropdown-inner-border-radius: 0;
+
+
+
+
+

@@ -1,0 +1,58 @@
+// Texts
+body {
+
+    --bs-body-color: #{$col1-900};
+}
+
+:root {
+    --heading-color: #{$col1};
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    color: var(--heading-color);
+    font-weight: 700;
+    margin: 1.3em 0 1em;
+}
+
+h1, h2{
+
+    color: $red;
+}
+
+a {
+
+    text-decoration: none;
+    color: $primary;
+}
+
+
+
+// Links inside headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    a:link,
+    a:visited {
+
+        color: unset;
+
+    }
+
+    a:link &,
+    a:visited & {
+
+        color: inherit;
+
+    }
+}

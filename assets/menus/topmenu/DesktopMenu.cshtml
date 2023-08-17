@@ -1,0 +1,57 @@
+@using DotNetNuke.Web.DDRMenu;
+@using System.Dynamic;
+@inherits DotNetNuke.Web.Razor.DotNetNukeWebPage<dynamic>
+    
+<ul class="navbar-nav ms-auto mt-2 mt-lg-0" id="nav-desktop">
+    @RenderPages(Model.Source.root.Children)
+</ul>
+
+@helper RenderPages(IEnumerable<MenuNode> pages)
+{
+    if (!pages.Any())
+    {
+        return;
+    }
+
+    foreach (var page in pages)
+    {
+        
+        var hasChildren = page.HasChildren();
+        HtmlString attrTarget = Html.Raw(!string.IsNullOrEmpty(page.Target) ? ("target=\"" + page.Target + "\"") : string.Empty);
+        HtmlString href = null;
+
+        var enabledClass = "";
+
+        if (page.Enabled){
+
+            href = Html.Raw(String.Concat("href=\"", page.Url, "\""));
+            
+        }else{
+
+            enabledClass = "disabled";
+
+        }
+
+
+        var lastClass = page.Last ? "dropdown-menu-end" : null;
+        var bcClass = page.Breadcrumb && !page.Selected ? " active-parent" : null;
+        var activeClass= page.Selected ? " active" : null;
+        var levelClass = "nav-level-" + page.Depth;
+
+        <li class='nav-item @levelClass @activeClass @bcClass'>
+                @if (hasChildren){
+                    <a class="nav-link @levelClass @enabledClass @activeClass @bcClass" @href @attrTarget><span class="link-text">@page.Text</span></a>
+                    if(page.Depth == 0){
+                    <span class="dropdown-toggle" role="button" data-bs-toggle="dropdown" data-bs-reference=".dropdown-menu" aria-haspopup="true" aria-expanded="false"></span>
+                    }
+                    <ul class="dropdown-menu @lastClass">
+                        @RenderPages(page.Children)
+                    </ul>
+                }else{
+                     <a class="nav-link @levelClass @enabledClass @activeClass @bcClass" @href @attrTarget><span class="link-text">@page.Text</span></a>
+                }
+
+
+        </li>
+    }
+}

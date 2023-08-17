@@ -1,0 +1,77 @@
+{
+  "fields": {
+    "Title": {
+      "type": "text"
+    },
+    "Dates": {
+      "type": "object",
+      "fields": {
+        "StartDate": {
+          "type": "date",
+          "picker": {}
+        },
+        "EndDate": {
+          "type": "date",
+          "picker": {}
+        },
+        "Text": {
+          "type": "text"
+        },
+        "Show": {
+          "type": "checkbox"
+        }
+      }
+    },
+    "Intro": {
+      "type": "textarea"
+    },
+    "Text": {
+      "type": "ckeditor"
+    },
+    "MainImage": {
+		  "type": "imagex",
+		  "uploadhidden": false,
+		  "uploadfolder": "Images/OpenContent/Full",
+		  "fileExtensions": "gif|jpg|jpeg|tiff|png",
+		  "fileMaxSize": 10000000,
+		  "showOverwrite": true,
+		  "overwrite": true,
+		  "showCropper": false,
+		  "cropfolder": "Images/OpenContent/Icon",
+		  "saveCropFile": true,
+		  "width": 900,
+		  "height": 900
+		},
+    "ProjectUrl": {
+      "type": "url"
+    },
+    "ReleaseUrl": {
+      "type": "url"
+    },
+    "DocumentationUrl": {
+      "type": "url"
+    },
+    "Type": {
+      "type": "select2",
+      "dataService": {
+        "action": "LookupData",
+        "data": {
+          "dataKey": "Type",
+          "valueField": "Id",
+          "textField": "Title"
+        }
+      }
+    },
+    "Categories": {
+      "type": "select2",
+      "dataService": {
+        "action": "LookupData",
+        "data": {
+          "dataKey": "Categories",
+          "valueField": "Id",
+          "textField": "Title"
+        }
+      }
+    }
+  }
+}

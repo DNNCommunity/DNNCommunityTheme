@@ -1,0 +1,125 @@
+{
+  "formfields": [
+    {
+      "fieldname": "Videos",
+      "title": "Video(s)",
+      "fieldtype": "accordion",
+      "subfields": [
+        {
+          "fieldname": "Title",
+          "title": "Video Title",
+          "fieldtype": "text",
+          "advanced": false
+        },
+        {
+          "fieldname": "YouTubeId",
+          "title": "Youtube Id",
+          "fieldtype": "text",
+          "advanced": false
+        },
+        {
+          "fieldname": "Description",
+          "title": "Video Description",
+          "fieldtype": "ckeditor",
+          "ckeditoroptions": {
+            "configset": "basic"
+          },
+          "advanced": false
+        },
+        {
+          "fieldname": "Icon",
+          "title": "Overrule YouTube Image",
+          "fieldtype": "imagex",
+          "imagexoptions": {
+            "uploadhidden": false,
+            "uploadfolder": "OpenContent/Images/YouTube",
+            "fileExtensions": "gif|jpg|jpeg|tiff|png",
+            "fileMaxSize": 2000000,
+            "showOverwrite": true,
+            "overwrite": false,
+            "showCropper": false
+          },
+          "advanced": true,
+          "required": false,
+          "hidden": false,
+          "default": "If empty, we will get the Icon from YouTube",
+          "multilanguage": false,
+          "position": "1col1",
+          "dependencies": []
+        }
+      ],
+      "advanced": true,
+      "required": false,
+      "hidden": false,
+      "helper": "If you add a series of Videos, also enter \"Series\" below",
+      "position": "1col1",
+      "dependencies": []
+    },
+    {
+      "fieldname": "Link",
+      "title": "Link to Video(s)",
+      "fieldtype": "url",
+      "advanced": false
+    },
+    {
+      "fieldname": "Series",
+      "title": "Series",
+      "fieldtype": "object",
+      "subfields": [
+        {
+          "fieldname": "Title",
+          "title": "Series Title",
+          "fieldtype": "text",
+          "advanced": false
+        },
+        {
+          "fieldname": "Text",
+          "title": "Series Text",
+          "fieldtype": "ckeditor",
+          "ckeditoroptions": {
+            "configset": "basic"
+          },
+          "advanced": false
+        },
+        {
+          "fieldname": "Icon",
+          "title": "Preview Image",
+          "fieldtype": "imagex",
+          "imagexoptions": {
+            "uploadhidden": false,
+            "uploadfolder": "Images/OpenContent/Videos/Full",
+            "fileExtensions": "gif|jpg|jpeg|tiff|png",
+            "fileMaxSize": 2000000,
+            "showOverwrite": true,
+            "overwrite": false,
+            "showCropper": true,
+            "cropfolder": "Images/OpenContent/Videos/Cropped",
+            "saveCropFile": true,
+            "width": 1280,
+            "height": 720
+          },
+          "advanced": false
+        }
+      ],
+      "advanced": true,
+      "required": false,
+      "hidden": false,
+      "helper": "If this is a series that consists of multiple Videos",
+      "position": "1col1",
+      "dependencies": []
+    },
+    {
+      "fieldname": "Categories",
+      "title": "Categories",
+      "fieldtype": "relation",
+      "relationoptions": {
+        "many": true,
+        "datakey": "Categories",
+        "valuefield": "Id",
+        "textfield": "Title"
+      },
+      "advanced": false
+    }
+  ],
+  "formtype": "object"
+}

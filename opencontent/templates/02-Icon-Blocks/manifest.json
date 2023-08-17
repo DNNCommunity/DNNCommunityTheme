@@ -1,0 +1,22 @@
+{
+	
+    "editWitoutPostback": true,
+    "index": true,
+	
+    "templates": {
+	    "template": {
+            "type": "multiple",
+            "title": "base",            
+            "main": {
+                "template": "template.hbs",
+								"clientSideData": false,
+				"dnnsearch": true,
+				"dnnSearchTitle": "{{Texts.Title}}",
+                 "dnnSearchDescription": "{{Texts.Text}}",
+                 "dnnSearchText": "{{Texts.Text}}"
+				
+            }
+        }
+    }
+
+}

@@ -1,0 +1,129 @@
+{
+  "fields": {
+    "Texts": {
+      "type": "object",
+      "fields": {
+        "ModuleTitle": {
+          "type": "text"
+        },
+        "Intro": {
+          "type": "ckeditor"
+        },
+        "Series": {
+          "type": "mltext"
+        },
+        "External": {
+          "type": "text"
+        },
+        "BackToList": {
+          "type": "mltext"
+        },
+        "BackTop": {
+          "type": "checkbox"
+        },
+        "BackBottom": {
+          "type": "checkbox"
+        }
+      }
+    },
+    "Style": {
+      "type": "object",
+      "fields": {
+        "Item": {
+          "type": "object",
+          "fields": {
+            "sm": {
+              "type": "select",
+              "sort": false,
+              "optionLabels": [
+                "1 Col = 100%",
+                "2 Cols = 50%"
+              ]
+            },
+            "md": {
+              "type": "select",
+              "sort": false,
+              "optionLabels": [
+                "1 Col = 100%",
+                "2 Cols = 50%",
+                "3 Cols = 33%"
+              ]
+            },
+            "lg": {
+              "type": "select",
+              "sort": false,
+              "optionLabels": [
+                "1 Col = 100%",
+                "2 Cols = 50%",
+                "3 Cols = 33%",
+                "4 Cols = 25%"
+              ]
+            },
+            "xl": {
+              "type": "select",
+              "sort": false,
+              "optionLabels": [
+                "1 Col = 100%",
+                "2 Cols = 50%",
+                "3 Cols = 33%",
+                "4 Cols = 25%"
+              ]
+            },
+            "xxl": {
+              "type": "select",
+              "sort": false,
+              "optionLabels": [
+                "1 Col = 100%",
+                "2 Cols = 50%",
+                "3 Cols = 33%",
+                "4 Cols = 25%"
+              ]
+            }
+          }
+        },
+        "SeriesEffect": {
+          "type": "select",
+          "sort": false,
+          "optionLabels": [
+            "Darker",
+            "Lighter",
+            "Stripes",
+            "Zig Zag Stripes",
+            "Arrow"
+          ]
+        }
+      }
+    },
+    "Filters": {
+      "type": "object",
+      "fields": {
+        "Text": {
+          "type": "checkbox"
+        },
+        "Category": {
+          "type": "checkbox"
+        }
+      }
+    },
+    "Options": {
+      "type": "object",
+      "fields": {
+        "NoCookies": {
+          "type": "checkbox"
+        },
+        "Related": {
+          "type": "checkbox"
+        },
+        "Controls": {
+          "type": "checkbox"
+        },
+        "Fullscreen": {
+          "type": "checkbox"
+        },
+        "Modestbranding": {
+          "type": "checkbox"
+        }
+      }
+    }
+  }
+}

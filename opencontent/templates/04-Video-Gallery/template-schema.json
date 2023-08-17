@@ -1,0 +1,165 @@
+{
+  "type": "object",
+  "properties": {
+    "Texts": {
+      "type": "object",
+      "title": "Texts",
+      "properties": {
+        "ModuleTitle": {
+          "type": "string",
+          "title": "Block Title (not visible)",
+          "required": true
+        },
+        "Intro": {
+          "type": "string",
+          "title": "Intro Text"
+        },
+        "Series": {
+          "type": "string",
+          "title": "Term used for Series",
+          "required": true,
+          "default": "Series"
+        },
+        "External": {
+          "type": "string",
+          "title": "External Link Term"
+        },
+        "BackToList": {
+          "type": "string",
+          "title": "Back to List Button",
+          "required": true
+        },
+        "BackTop": {
+          "type": "boolean",
+          "title": "Show Back Button on Top",
+          "default": "false"
+        },
+        "BackBottom": {
+          "type": "boolean",
+          "title": "Show Back Button at Bottom",
+          "default": "true"
+        }
+      }
+    },
+    "Style": {
+      "type": "object",
+      "title": "Style",
+      "properties": {
+        "Item": {
+          "type": "object",
+          "title": "Item Layout",
+          "properties": {
+            "sm": {
+              "type": "string",
+              "title": "Mobile: nr. of Columns",
+              "enum": [
+                "12",
+                "6"
+              ],
+              "default": "12"
+            },
+            "md": {
+              "type": "string",
+              "title": "Tablet █ Columns",
+              "enum": [
+                "12",
+                "6",
+                "4"
+              ],
+              "default": "12"
+            },
+            "lg": {
+              "type": "string",
+              "title": "Desktop: nr. of Columns",
+              "enum": [
+                "12",
+                "6",
+                "4",
+                "3"
+              ],
+              "default": "12"
+            },
+            "xl": {
+              "type": "string",
+              "title": "Desktop large: nr. of Columns",
+              "enum": [
+                "12",
+                "6",
+                "4",
+                "3"
+              ],
+              "default": "6"
+            },
+            "xxl": {
+              "type": "string",
+              "title": "Desktop extra large: nr. of Columns",
+              "enum": [
+                "12",
+                "6",
+                "4",
+                "3"
+              ],
+              "default": "6"
+            }
+          }
+        },
+        "SeriesEffect": {
+          "type": "string",
+          "title": "Series Image Effect",
+          "enum": [
+            "darker",
+            "lighter",
+            "stripes",
+            "zigzag",
+            "arrow"
+          ]
+        }
+      }
+    },
+    "Filters": {
+      "type": "object",
+      "title": "Filters",
+      "properties": {
+        "Text": {
+          "type": "boolean",
+          "title": "Show Text Filter"
+        },
+        "Category": {
+          "type": "boolean",
+          "title": "Show Category Filter"
+        }
+      }
+    },
+    "Options": {
+      "type": "object",
+      "title": "Video Options",
+      "properties": {
+        "NoCookies": {
+          "type": "boolean",
+          "title": "Use No Cookies Embed",
+          "default": "false"
+        },
+        "Related": {
+          "type": "boolean",
+          "title": "Show External related Videos",
+          "default": "false"
+        },
+        "Controls": {
+          "type": "boolean",
+          "title": "Show Video Controls",
+          "default": "false"
+        },
+        "Fullscreen": {
+          "type": "boolean",
+          "title": "Show Full Screen Icon",
+          "default": "true"
+        },
+        "Modestbranding": {
+          "type": "boolean",
+          "title": "Less Prominent YouTube Logo",
+          "default": "true"
+        }
+      }
+    }
+  }
+}

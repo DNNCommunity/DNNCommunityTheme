@@ -1,0 +1,310 @@
+$font-sm: 0.9em;
+$font-xl: 1.3em;
+
+$body-top-bar-dist: 0.5em;
+
+$body-top-bar-padding: $body-top-bar-dist;
+
+$body-top-bar-bg: $col1-900;
+$body-top-bar-link-col: $gray-100;
+$body-top-bar-item-border: solid 1px $gray-500;
+
+$body-top-bar-item-padding: $body-top-bar-dist;
+$body-top-bar-icon-padding: $body-top-bar-dist;
+
+// Search Default
+$search-input-bg : $gray-100;
+$search-input-col: $black;
+$search-input-border: solid 1px transparent;
+
+
+$search-bar-padding: 0 $body-top-bar-item-padding 0 0;
+
+
+
+// Focus
+$search-input-focus-bg: $white;
+$search-input-focus-col: $col1;
+$search-input-focus-border: solid 1px $col1;
+
+
+
+$search-input-max-width: 150px;
+$search-input-min-width: 50px;
+
+$search-input-min-lg-width: 100px;
+$search-input-max-lg-width: 250px;
+
+
+@mixin iconfont{
+
+
+    
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+
+
+
+
+}
+
+
+.body-top-bar {
+
+    background: $body-top-bar-bg;
+
+    padding: $body-top-bar-padding;
+
+    text-align: right;
+
+    font-size: $font-sm;
+
+
+}
+
+// Header
+.dnn-logo {
+    padding-top: 0.9em;
+    padding-bottom: 0.9em;
+    display: flex;
+    align-items: center;
+
+    img {
+        max-height: 2.5em;
+    }
+
+    .community-text {
+        font-size: 1em;
+        display: inline-block;
+       
+        margin: 0.45em 0 0 0.65em;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-indent: -2.5em;
+        white-space: nowrap;
+    }
+}
+
+
+
+
+
+
+
+.login-user-search {
+
+    #item-border {
+
+        border-right: $body-top-bar-item-border;
+        padding: 0 $body-top-bar-item-padding;
+
+    }
+
+    display: flex;
+    gap: $body-top-bar-dist;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap:wrap;
+
+
+
+
+    a {
+
+        &:link,
+        &:visited {
+            color: $body-top-bar-link-col;
+        }
+
+
+    }
+
+    i.iconfont {
+
+        font-size: $font-xl;
+    }
+
+    .loginGroup,
+    .registerGroup {
+        display: inline-block;
+    }
+
+    .user-login-wrap {
+        display: flex;
+        align-items: center;
+    }
+
+    .login-link {
+        display: inline-block;
+        white-space: nowrap;
+        padding: 0 $body-top-bar-item-padding;
+
+
+
+            // &:before {
+            //     @include iconfont;
+            //     content: "\F892";
+            //     display: inline-block;
+            //     font-size: $font-xl;
+                
+            //     padding-right: $body-top-bar-icon-padding;
+            // }
+
+    }
+
+
+
+    .registerGroup {
+        display: inline-block;
+
+        .buttonGroup {
+            display: flex;
+
+            &,
+            & li {
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+                order: 1;
+
+
+                // Hide the texts as the are wrapped in a <strong>
+                strong {
+
+                    display: none;
+                }
+            }
+
+           
+
+            // User messages
+            .userMessages {
+                
+
+                >a {
+
+
+
+                    &::before {
+                        @include iconfont;
+                        content: "\f086";
+                        display: inline-block;
+                        font-size: $font-xl;
+
+                    }
+
+                    margin-right: 0.5em;
+                }
+            }
+
+            .userNotifications {
+
+                
+                >a {
+
+                    &::before {
+                        @include iconfont;
+                        content: "\f0f3";
+                        display: inline-block;
+                        font-size: $font-xl;
+                    }
+                    margin-right: 0.5em;
+                }
+            }
+
+            .userDisplayName {
+                order: 10;
+
+                @include media-breakpoint-up(md) {
+                 
+                }
+
+                .user-link {
+                    display: none;
+                    white-space: nowrap;
+
+                   @include media-breakpoint-up(md) {
+                        display: inline-block;
+                        
+                        padding: 0 $body-top-bar-item-padding 0 0;
+                    }
+
+                }
+            }
+
+
+
+
+            .userProfileImg {
+
+                padding: 0 $body-top-bar-icon-padding 0 $body-top-bar-item-padding;
+
+                img {
+                    border-radius: 50%;
+                    min-width: 32px;
+                }
+
+
+            }
+
+
+        }
+    }
+    .search-wrap {
+        position: relative;
+        z-index: 1005;
+
+
+        input {
+            border: $search-input-border;
+            background: $search-input-bg;
+            color: $search-input-col;
+            padding: 0.3em;
+
+            width: $search-input-min-width;
+            transition: width 0.5s;
+
+           @include media-breakpoint-up(md) {
+
+                width: $search-input-min-lg-width;
+
+            }
+
+
+            &:focus {
+                border: $search-input-focus-border;
+                background: $search-input-focus-bg;
+                color: $search-input-focus-col;
+                outline: none;
+                width: 70vw;
+
+                @include media-breakpoint-up(lg) {
+
+                    width: $search-input-max-lg-width;
+
+                }
+
+                transition: width 0.5s;
+
+            }
+        }
+
+        .searchSkinObjectPreview {
+
+            text-align: left;
+        }
+
+        .SearchButton{
+
+            margin-left: 0.3em;
+        }
+
+
+    }
+
+}

@@ -1,0 +1,44 @@
+/* Login styling */
+.LoginPanel {
+    width: auto;
+    padding-right: 0;
+    float: none;
+
+    &,
+    & .dnnFormItem {
+        display: inline-block;
+        padding-top: 0;
+    }
+
+    .dnnLabel,
+    .dnnFormLabel {
+        float: none;
+        text-align: left;
+        margin: 0;
+        width: auto;
+    }
+
+    .dnnFormItem {
+
+
+        >label.dnnFormLabel,
+        >span.dnnFormLabel {
+            display: none;
+        }
+
+
+
+
+        input[type=text],
+        input[type=password] {
+            max-width: 300px;
+        }
+
+
+
+        .dnnActions {
+            padding-left: 0;
+        }
+
+    }
+}

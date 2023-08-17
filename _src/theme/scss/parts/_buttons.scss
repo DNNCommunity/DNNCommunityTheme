@@ -1,0 +1,20 @@
+
+// Buttons
+.btn-primary{
+
+    --bs-btn-color: #{$white}; // overrrule text color to white
+    --bs-btn-bg: #{$red};
+    --bs-btn-border-color: #{$red};
+
+    &:visited{ // Due to DNN default.css def for :visited
+        color: $white;
+    }
+}
+
+
+.btn-secondary{
+
+    --bs-btn-color: #{$white}; // overrrule text color to white
+    --bs-btn-bg: #{$col1};
+    --bs-btn-border-color: #{$col1};
+}

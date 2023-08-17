@@ -1,0 +1,16 @@
+{
+  "DefaultNoResults": false,
+  "ExcludeCurrentItem": false,
+  "CurrentUserItems": false,
+  "Filter": {},
+  "Sort": [
+    {
+      "Field": "SortIndex",
+      "Order": "asc"
+    },
+    {
+      "Field": "$timestamp",
+      "Order": "asc"
+    }
+  ]
+}

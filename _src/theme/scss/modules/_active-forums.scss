@@ -1,0 +1,40 @@
+.forum-latest{
+    &-item{
+        border: solid 1px $col1;
+        padding: 0.8em;
+        background: $white;
+        overflow:hidden;
+        h4{
+            font-size: 0.9em;
+            margin:0;
+            font-weight: normal;
+            color: $col1-900;
+            text-transform: uppercase;
+        }
+        h3{
+            font-size: 1.3em;
+            margin: 0.5em 0;
+        }
+        
+        min-height: 100%;
+
+        
+    }
+
+    &-link{
+        &:hover{
+            color: $red;
+        }
+    }
+
+    &-text{
+        text-overflow: ellipsis;
+        overflow:hidden;
+        max-height: 4.5em;
+    }
+
+    .col-12{
+        padding-bottom: 1.8em;
+    }
+
+}

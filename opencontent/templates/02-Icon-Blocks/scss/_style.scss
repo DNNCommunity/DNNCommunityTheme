@@ -1,0 +1,90 @@
+.oc-icon-blocks{
+	
+	margin: 2em 0;
+
+	.item{
+		margin-bottom: 2em;
+		.item-content{
+			min-height: 100%;
+			background: $white;
+			display: flex;
+			flex-direction: column ;
+			padding: 3em 2em;
+			border-radius: 2px;
+			//border: solid 2px $col1-200;
+			
+		}
+	
+	}
+}
+
+
+
+
+.oc-icon-blocks .item-content:hover{
+	background: #fff;
+	border-color: $red;
+}
+
+.oc-icon-blocks .title{
+	font-size: 1.4em;
+	margin-bottom: 0.8em;
+	color: $col1-600;
+}
+
+.oc-icon-blocks .text{
+	color: $col1-700;
+	
+}
+
+.oc-icon-blocks .item-content:hover .text,
+.oc-icon-blocks .item-content:hover .title{
+	color: $col1;
+	
+}
+
+.oc-icon-blocks .btn{
+	color: $white;
+
+	&:after{
+		content: ' »';
+		font-size: 1.5em;
+		line-height: 1em;
+	}
+
+}
+
+
+.oc-icon-blocks .text-link{
+	flex-grow: 1;
+}
+
+.oc-icon-blocks .icon{
+	margin-bottom: 1.5rem;
+}
+
+.oc-icon-blocks .icon i{
+	font-size: 3rem;
+	line-height: calc(5rem - 4px);
+	width: 5rem;
+	text-align:center;
+	background-color: white;
+	border: solid 3px currentColor;
+	border-radius: 50%;
+	color: $red;
+	transition: color 0.5s;
+}
+
+
+
+.oc-icon-blocks .text-link:hover .icon i{
+	background-color: $col1;
+	color: $white;
+	border-color: $col1;
+	transition: all 0.5s;
+}
+
+
+
+
+	

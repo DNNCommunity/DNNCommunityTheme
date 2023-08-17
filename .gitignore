@@ -1,3 +1,2 @@
-node_modules/
-build/
-dist/
+/__Skinpack
+/node_modules

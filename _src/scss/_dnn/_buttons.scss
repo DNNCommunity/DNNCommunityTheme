@@ -1,0 +1,43 @@
+.dnnPrimaryAction, .dnnFormItem input[type="submit"], a.dnnPrimaryAction,
+.dnnFormItem button, .dnnFormItem input[type="button"],
+.dnnFormItem input[type="reset"],
+.dnnFormItem input[type="submit"],
+input[type='submit']
+{
+
+    @extend .btn;
+    @extend .btn-primary;
+
+    &, &:hover{
+    text-shadow: none;
+    box-shadow: none;
+    background-image:none;
+    }
+
+    &:hover{
+        color: var(--bs-btn-hover-color);
+        background-color: var(--bs-btn-hover-bg);
+        border-color: var(--bs-btn-hover-border-color);
+    }
+
+}
+
+.dnnSecondaryAction, .dnnFormItem input[type="submit"], a.dnnSecondaryAction,
+.dnnTertiaryAction{
+
+    @extend .btn;
+    @extend .btn-secondary;
+
+    &, &:hover{
+    text-shadow: none;
+    box-shadow: none;
+    background-image:none;
+    }
+
+    &:hover{
+        color: var(--bs-btn-hover-color);
+        background-color: var(--bs-btn-hover-bg);
+        border-color: var(--bs-btn-hover-border-color);
+    }
+
+}
