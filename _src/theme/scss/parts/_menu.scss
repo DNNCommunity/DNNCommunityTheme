@@ -53,6 +53,7 @@
     .nav-item {
         position: relative;
         padding: 1em $nav-lvl-0-pad-x;
+        font-weight: bold;
 
 
         &.nav-level-0 {
@@ -89,7 +90,7 @@
             &.active,
             &.active-parent {
                 color: $white;
-                border-bottom: solid 2px $red;
+                border-bottom: solid 2px $col1;
 
             }
 
@@ -147,14 +148,11 @@
 
 
                     &.active {
-                        &:before {
-                            content: "";
-                            display: inline-block;
-                            background: $col1;
-                            width: 8px;
-                            height: 8px;
-                            margin-right: 0.4em;
-                            border-radius: 50%;
+
+                        .link-text{
+                            display: inline;
+                            flex-grow: 0;
+                            border-bottom: solid 2px $red;
                         }
                     }
 

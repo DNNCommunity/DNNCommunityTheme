@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const concat = require('gulp-concat');
 const clean = require('gulp-clean');
 const sass = require('gulp-sass')(require('sass'));
 const cleanCSS = require('gulp-clean-css');
@@ -10,7 +11,7 @@ const folderName =  folderPath.substring(folderPath.lastIndexOf('\\') + 1);
 
 
 // SCSS ----------------------
-const skinScssPath = ['./_src/scss/skin.scss'];
+const skinScssPath = ['./_src/skin.scss'];
 const scssWatchPath = ['./_src/**/*.scss','./opencontent/templates/**/*.scss'];
 
 function buildScss() { // Parse only the Skin.less file
@@ -54,7 +55,19 @@ function copyContainers() { // Parse only the Skin.less file
 	;
 }
 
+const jsWatchPath = '_src/theme/js/**/*.js'
+const jsSource = ['_src/theme/js/menu.js', '_src/theme/js/menu-hover.js', '_src/theme/js/mark-empty-panes.js', '_src/theme/js/scroll-class.js'];
+const jsDest = ['vendors/theme/js'];
 
+function jsBundle(cb){
+
+  gulp.src(jsSource)
+  .pipe(concat('scripts.js'))
+  .pipe(gulp.dest(jsDest));
+
+  cb();
+
+}
 
 
 function styleTask(){
@@ -67,11 +80,13 @@ function styleTask(){
 function watchTask(){
     gulp.watch(containerSource, { delay: 1000 }, copyContainers);
     gulp.watch(scssWatchPath, buildScss);
+    gulp.watch(jsWatchPath, jsBundle);
 }
 
 exports.copyContainers = copyContainers;
 exports.buildScss = buildScss;
 exports.style = styleTask;
+exports.jsbundle = jsBundle;
 
 exports.default = watchTask;
 

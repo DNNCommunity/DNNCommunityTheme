@@ -1,11 +1,8 @@
-$font-sm: 0.9em;
-$font-xl: 1.3em;
-
 $body-top-bar-dist: 0.5em;
 
 $body-top-bar-padding: $body-top-bar-dist;
 
-$body-top-bar-bg: $col1-900;
+$body-top-bar-bg: $black;
 $body-top-bar-link-col: $gray-100;
 $body-top-bar-item-border: solid 1px $gray-500;
 
@@ -36,18 +33,6 @@ $search-input-min-lg-width: 100px;
 $search-input-max-lg-width: 250px;
 
 
-@mixin iconfont{
-
-
-    
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
-
-
-
-
-}
-
 
 .body-top-bar {
 
@@ -62,28 +47,6 @@ $search-input-max-lg-width: 250px;
 
 }
 
-// Header
-.dnn-logo {
-    padding-top: 0.9em;
-    padding-bottom: 0.9em;
-    display: flex;
-    align-items: center;
-
-    img {
-        max-height: 2.5em;
-    }
-
-    .community-text {
-        font-size: 1em;
-        display: inline-block;
-       
-        margin: 0.45em 0 0 0.65em;
-        text-transform: uppercase;
-        overflow: hidden;
-        text-indent: -2.5em;
-        white-space: nowrap;
-    }
-}
 
 
 

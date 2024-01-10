@@ -119,3 +119,11 @@ $skew-dist-correction: 30px; // As the skew creates quite a large space at the t
         clip-path: polygon(0 0, 100% 0, 100% $skew-dist-y-extra, 0 100%);
     }
 }
+
+
+@mixin red-blue-border($location){
+    border-#{$location}: 3px solid;
+    border-image-slice: 1;
+    border-width: 3px;
+    border-image-source: linear-gradient(90deg, $col1 0%, $col1 50%, $red 50%);
+    }

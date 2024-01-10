@@ -1,7 +1,7 @@
                 <!-- Page content-->
                 <main class="skin-main content-wrap">
-                <div class="pane pane-top py-0" id="top_pane_full_width" ContainerSrc="DNN-Community-2023/NoTitle.ascx" runat="server" />
-                <div class="bg-blue skew-bottom panes">
+                <div class="pane pane-top py-0" id="top_pane_full_width" ContainerSrc="DNN-Community-2024/NoTitle.ascx" runat="server" />
+                <div class="bg-blue skew-bottom panes mt-0">
                     
                     <div class="container">
 						<div class="row gx-5">

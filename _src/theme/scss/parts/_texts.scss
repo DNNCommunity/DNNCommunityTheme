@@ -30,9 +30,19 @@ a {
 
     text-decoration: none;
     color: $primary;
+
+    &:visited{
+
+        color: $primary; // Overrule default.css
+
+    }
 }
 
 
+
+
+
+@include google-font($google-font-import);
 
 // Links inside headings
 h1,

@@ -1,4 +1,4 @@
- <ul class="footer-bottom d-block d-md-flex">
+ <ul class="d-block d-md-flex pt-2">
         <li><dnn:COPYRIGHT id="dnnCopyright" runat="server" /></li>
         <li><a href="/Contributors" rel="nofollow">Website Contributors</a></li>
         <li><a href="https://dotnetfoundation.org" target="_blank">Supported by the .NET Foundation</a></li>

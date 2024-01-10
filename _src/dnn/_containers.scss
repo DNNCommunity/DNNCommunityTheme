@@ -1,0 +1,4 @@
+// Containers, needed when you use a float near the end of a container
+.DNNModuleContent {
+    @include clearfix;
+}

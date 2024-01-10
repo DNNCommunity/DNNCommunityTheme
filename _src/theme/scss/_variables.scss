@@ -1,15 +1,16 @@
-// Font 
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+// BS Text
 
+$font-weight-base : 300;
+$google-font-import: 'https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,700;1,400&display=swap';
 $font-family-base: 'Mulish', sans-serif;
-
 
 // DNN colors
 
 $dnn-blue: #1ea3dc;
 $dnn-red: #ef3d43;
 
-
+// DNN Color
+$blue: $dnn-blue;
 
 // overrrule BS5 Colors
 $col1: $dnn-blue !default;
@@ -17,7 +18,6 @@ $col1: $dnn-blue !default;
 // Get the main color Hue
 $col1-hue: hue($col1);
 $col-sat: saturation($col1);
-
 
 
 $col1-100: hsl($col1-hue, $col-sat, 90%);
@@ -47,6 +47,11 @@ $gray-700: #474b4d;
 $gray-800: #2f3233;
 $gray-900: #18191a;
 $black:    #000;
+
+// Font-sizes
+$font-sm: 0.9em;
+$font-lg: 1.1em;
+$font-xl: 1.3em;
 
 // Menu
 // Menu

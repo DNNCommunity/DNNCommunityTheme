@@ -2,7 +2,7 @@
 // Panes
 .panes{
 
-
+    margin: 2em 0;
     // Hide wrappers containing only empty panes in view mode
     &.panes-empty{
         body:not(.dnnEditState) &{
@@ -15,6 +15,8 @@
 
         
     }
+
+
 }
 
 
@@ -27,6 +29,10 @@ body.PageType_Edit {
 
 
 .pane {
+
+    &-top{
+        margin-bottom: -2px;
+    }
 
     // padding: 0 0 1.5em;
 

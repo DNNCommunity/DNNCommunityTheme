@@ -1,20 +1,26 @@
-
+$btn-primary-color: $white;
 // Buttons
 .btn-primary{
 
-    --bs-btn-color: #{$white}; // overrrule text color to white
+    --bs-btn-color: #{$btn-primary-color}; // overrrule text color to white
     --bs-btn-bg: #{$red};
     --bs-btn-border-color: #{$red};
+    border-width: 0;
+
 
     &:visited{ // Due to DNN default.css def for :visited
-        color: $white;
+        color: $btn-primary-color;
     }
 }
 
 
 .btn-secondary{
 
-    --bs-btn-color: #{$white}; // overrrule text color to white
+    --bs-btn-color: #{$btn-primary-color}; // overrrule text color to white
     --bs-btn-bg: #{$col1};
     --bs-btn-border-color: #{$col1};
+
+    &:visited{ // Due to DNN default.css def for :visited
+        color: $btn-primary-color;
+    }
 }

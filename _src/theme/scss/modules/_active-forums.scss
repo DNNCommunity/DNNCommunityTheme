@@ -25,6 +25,10 @@
         &:hover{
             color: $red;
         }
+
+        &:visited{
+            color: $gray-500;
+        }
     }
 
     &-text{

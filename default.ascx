@@ -1,4 +1,4 @@
-<%@ Control Language="vb" CodeBehind="~/admin/Skins/skin.vb" AutoEventWireup="false"
+<%@ Control Language="c#" AutoEventWireup="false"
     Explicit="True" Inherits="DotNetNuke.UI.Skins.Skin" %>
 <%@ Register TagPrefix="dnn" TagName="LOGIN" Src="~/Admin/Skins/Login.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="LOGO" Src="~/Admin/Skins/Logo.ascx" %>
@@ -15,6 +15,11 @@
 
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.Client.ClientResourceManagement" Assembly="DotNetNuke.Web.Client" %>
 <%@ Register TagPrefix="fortyfingers" TagName="STYLEHELPER" Src="~/DesktopModules/40Fingers/SkinObjects/StyleHelper/StyleHelper.ascx" %>
+
+
+	<!-- FontAwsome 5 + 4 shim-->
+	<dnn:DnnCssInclude runat="server" FilePath="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" Name="fontawesome" Version="5.15.4" Priority="15"  />
+	<dnn:DnnCssInclude runat="server" FilePath="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/v4-shims.min.css" Name="fontawesome-shim4" Version="5.15.4" Priority="15" />
 
 
 
@@ -35,36 +40,31 @@
 
             <!-- Page content wrapper-->
             <div class="page-content-wrapper">
-            <div class="sticky-top ">
+            <div class="sticky-top">
             	<!-- #include file="Includes/top-bar-login-search.ascx" -->
-                <header class="skin-header bg-blue-extra-dark">
-
-                <div class="header-top">
-                </div>
-                 <div class="container">
-                 <div class="row">
-                <div class="logo col col-6 col-lg-3 flex-vert-align">
-                    <!-- #include file="Includes/logo.ascx" -->
-                </div>
-                <div class="col d-lg-none text-end d-flex justify-content-end align-items-center">
-                <button id="navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
-                 </div>
-                    <!-- Top navigation-->
-                    <div class="col-12 col-lg">
-                    <nav class="navbar navbar-expand-lg">
-                       
-                            
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <dnn:MENU MenuStyle="assets/menus/topmenu" runat="server" ExcludeNodes="Admin,Host"></dnn:MENU>
+                <header class="skin-header">
+                    <div class="header-top">
+                    </div>
+					<div class="container">
+                        <div class="row">
+                            <div class="logo col col-6 col-lg-3 flex-vert-align">
+                                <!-- #include file="Includes/logo.ascx" -->
                             </div>
-                        
-                    </nav>
-                    </div>
-                    </div>
-                    </div>
+                            <div class="col d-lg-none text-end d-flex justify-content-end align-items-center">
+                                <button id="navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+                            </div>
+							<!-- Top navigation-->
+							<div class="col-12 col-lg">
+								<nav class="navbar navbar-expand-lg">
+									<div class="collapse navbar-collapse" id="navbarSupportedContent">
+										<dnn:MENU MenuStyle="assets/menus/topmenu" runat="server" ExcludeNodes="Admin,Host"></dnn:MENU>
+									</div>
+								</nav>
+							</div>
+						</div>
+					</div>
                 </header>
             </div>
-
                 <!-- #include file="Includes/panes.ascx" -->
                 <footer class="skin-footer bg-blue-super-dark skew-top">
                     <div class="container py-5">
@@ -97,18 +97,14 @@
                         </div>
                     </div>
                 </footer>
-                
-               
             </div>
  
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
         <!-- Core theme JS-->
 		<dnn:DnnJsInclude runat="server" ForceProvider="DnnFormBottomProvider" FilePath="vendors/theme/js/scripts.js" PathNameAlias="SkinPath" />
-        <!-- FontAwsome 5 + 4 shim-->
-        <dnn:DnnCssInclude runat="server" FilePath="vendors/fontawesome-free-5.15.4-web/css/all.css" Name="fontawesome" Version="5.15.4" Priority="15" PathNameAlias="SkinPath" />
-        <dnn:DnnCssInclude runat="server" FilePath="vendors/fontawesome-free-5.15.4-web/css/v4-shims.min.css" Name="fontawesome-shim4" Version="5.15.4" Priority="15" PathNameAlias="SkinPath" />
-
-
 
 		

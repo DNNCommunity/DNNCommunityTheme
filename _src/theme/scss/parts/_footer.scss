@@ -4,6 +4,9 @@
 
     .footer-bottom{
         
+        @include red-blue-border(top);
+
+        background: $skin-header-background;
 
         li{
             padding: 0.5em 1em;

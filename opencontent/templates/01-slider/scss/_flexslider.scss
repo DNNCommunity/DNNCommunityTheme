@@ -1,10 +1,12 @@
+@use 'sass:color';
+
 .flexslider {
 	border: none !important;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	border-radius: 0;
-	margin-bottom: 0;
-	
+	margin-bottom:0;
+
 	.img {
 		overflow: hidden;
 		position: relative;
@@ -13,34 +15,42 @@
 		overflow: hidden;
 
 	}
+
 	.container {
-		padding-top:1.5em;
-		padding-bottom:3em;
-		min-height:100%;
-		display:flex;
+		padding-top: 1.5em;
+		padding-bottom: 3em;
+		min-height: 100%;
+		display: flex;
 	}
+
 	.text-wrap {
 		position: absolute;
 		top: 0;
 		width: 100%;
 		height: 100%;
+
 		p {
 			&:last-child {
 				margin-bottom: 0;
 			}
 		}
 	}
+
 	li {
 		list-style: none;
 	}
+
 	.text {
 		display: inline-block;
-		background: rgba(255,255,255,0.92);
+		background: color.scale($blue-800, $alpha: -5%);
 		padding: 1em 1.1em;
 		max-width: 100%;
-		min-width: 33%;
+		min-width: 33.33333%;
+		color: $white;
 
 		font-size: 0.75rem;
+		border-top: solid 3px $red;
+		border-bottom: solid 3px $blue;
 
 		@include media-breakpoint-up(md) {
 			font-size: 0.9rem;
@@ -50,72 +60,80 @@
 			font-size: 1rem;
 		}
 
-		
 
-		
-		.btn{
-			margin-top:0.7em;
-			font-size:1em;
-			
+		a{
+			// color: $red;
 		}
-		
+
+		.button {
+			margin-top: 1.5em;
+			font-size: 1em;
+
+		}
+
 		.flex-title {
 			padding: 0;
 			margin: 0;
 			font-size: 1.4em;
-			color: $col1-600;
+			color: $white;
 		}
-		
+
 		.flex-description {
-			padding-top:0.7em;
-			display:none;
+			padding-top: 0.7em;
+			display: none;
 
 			@include media-breakpoint-up(md) {
 				display: inline-block;
 			}
-			
-		}
-		
-		// overrrule color when inside a link
-		a .flex-description {
 
 		}
-		
-		
+
+		// overrrule color when inside a link
+		a .flex-description {}
+
+
 	}
-	
-	.container{
+
+	.container {
 		justify-content: flex-start;
 		align-items: flex-start;
+
 		&.h-left {
 			justify-content: flex-start;
 		}
+
 		&.h-center {
 			justify-content: center;
 		}
+
 		&.h-right {
 			justify-content: flex-end;
 		}
+
 		&.v-top {
 			align-items: flex-start;
 		}
+
 		&.v-middle {
 			align-items: center;
 		}
+
 		&.v-bottom {
 			align-items: flex-end;
 		}
 	}
-	
+
 	.flex-error {
 		padding: 1em 0;
 		color: #f80;
 	}
+
 	.flex-no-image {
 		.text {
 			display: none;
 		}
 	}
+
 	.flex-direction-nav {
 		a {
 			&::before {
@@ -123,23 +141,30 @@
 				text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
 			}
 		}
+
 		overflow: hidden;
+
 		.flex-previous {
 			left: 0;
 		}
+
 		.flex-next {
 			right: 0;
 		}
 	}
+
 	.fade {
 		opacity: 0;
 		margin-left: -10vw;
-		transition: opacity 1s ease-in, margin-left 0.5s ease-in;
-		transition-delay: 0.8s;
+		transition: opacity 0.7s ease-in;
+		transition-delay: 0.3s;
 	}
+
 	.fade2 {
-		transition-delay: 0.9s;
+		transition-delay: 0.5s;
 	}
+
+
 	.flex-active-slide {
 		.fade {
 			opacity: 1;
@@ -147,19 +172,22 @@
 		}
 	}
 }
-.flexslider.heightauto{
 
-	.slide{
-		overflow:hidden;
+.flexslider.heightauto {
+
+	.slide {
+		overflow: hidden;
 	}
 }
 
 .flexslider.height75 {
 	max-height: 75vh;
 	height: 75vh;
+
 	.img {
-		min-height: 75vh;
-		height: 75vh;
+		min-height: 100%;
+		height: 100%;
+
 		img {
 			height: 75vh !important;
 			object-fit: cover;
@@ -171,9 +199,11 @@
 .flexslider.height50 {
 	max-height: 50vh;
 	height: 50vh;
+
 	.img {
 		min-height: 50vh;
 		height: 50vh;
+
 		img {
 			height: 50vh !important;
 			object-fit: cover;
@@ -183,13 +213,15 @@
 }
 
 .flexslider.height33 {
-	max-height: 33vh;
-	height: 33vh;
+	max-height: 33.3333vh;
+	height: 33.3333vh;
+
 	.img {
-		min-height: 33vh;
-		height: 33vh;
+		min-height: 33.3333vh;
+		height: 33.3333vh;
+
 		img {
-			height: 33vh !important;
+			height: 33.3333vh !important;
 			object-fit: cover;
 			object-position: 50% 50%;
 		}
@@ -207,26 +239,32 @@
 	padding: 0;
 	bottom: auto;
 	z-index: 3;
-	
-	&.flex-control-paging{
-		position:absolute;
-		margin-top: -2em;
-		
-		li{
-			a{
-				width: 20px;
-				height:20px;
+
+	&.flex-control-paging {
+		position: absolute;
+		margin-top: -2rem;
+
+		li {
+			a {
+
+
 				background: $col1;
 				box-shadow: none;
 				outline: solid 3px #ffffff66;
-				
-				&.flex-active{
+
+				&.flex-active {
 					background: $red;
+				}
+
+				width: 12px;
+				height:12px;
+
+				@include media-breakpoint-up(md) {
+
+					width: 20px;
+					height: 20px;
 				}
 			}
 		}
 	}
 }
-
-
-
