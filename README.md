@@ -15,5 +15,13 @@ New (2023) DNN community site Theme.
 - The Gulp script assumes the name of your container folder is the same as the skin folder.
 - The MS build script currently assumes you have the community build tasks installed en uses 7 Zip.
 
+## Setup
+	
+	- Fork the project
+	- Clone your Fork
+	- run: npm install
+	- run: npm Setup
+	- run: gulp
+
 
 
