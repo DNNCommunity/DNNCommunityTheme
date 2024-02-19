@@ -16,7 +16,7 @@
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.Client.ClientResourceManagement" Assembly="DotNetNuke.Web.Client" %>
 <%@ Register TagPrefix="fortyfingers" TagName="STYLEHELPER" Src="~/DesktopModules/40Fingers/SkinObjects/StyleHelper/StyleHelper.ascx" %>
 
-
+<!-- #include file="Includes/font-awesome.ascx" -->
 
 
 <fortyfingers:STYLEHELPER id="FFSH1" 
@@ -118,12 +118,6 @@
  
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+       
         <!-- Core theme JS-->
 		<dnn:DnnJsInclude runat="server" ForceProvider="DnnFormBottomProvider" FilePath="vendors/theme/js/scripts.js" PathNameAlias="SkinPath" />
-        <!-- FontAwsome 4-->
-        <dnn:DnnCssInclude runat="server" FilePath="vendors/fontawesome-free-5.15.4-web/css/all.css" PathNameAlias="SkinPath" />
-        <dnn:DnnCssInclude runat="server" FilePath="vendors/fontawesome-free-5.15.4-web/css/v4-shims.min.css" PathNameAlias="SkinPath" />
-
-
-
-		

@@ -5,8 +5,7 @@
 @import "./theme/scss/_variables.scss";
 
 // Default Bootstrap 5
-@import "../node_modules/bootstrap-scss/bootstrap.scss";
-
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 // DNN overrules
 @import "./dnn/dnn.scss";

@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="PackageSkin">
+
+	<PropertyGroup>
+		<CompanyName>DNN-Community</CompanyName>
+		<SkinName>DNN-Community-2024</SkinName>
+		<ContainerFolderName>DNN-Community-2024</ContainerFolderName>
+		<CoreVersion>09.02.00</CoreVersion>
+		<Major>02</Major>
+		<Minor>00</Minor>
+		<Build>01</Build>
+		<CompanyUrl>dnncommunity.org</CompanyUrl>
+		<CompanyEmail>community@dnncommunity.org</CompanyEmail>
+		<SkinDescription>DNN Community 2024 Theme</SkinDescription>
+	</PropertyGroup>
+	
+		
+	<PropertyGroup>
+		<SkinFolder>$(MSBuildProjectDirectory)\..</SkinFolder>
+		<ContainerFolder>$(MSBuildProjectDirectory)\..\..\..\Containers\$(ContainerFolderName)</ContainerFolder>
+		<SkinPackageFolder>$(Major).$(Minor).$(Build)</SkinPackageFolder>
+		<PackageName>$(CompanyName)-$(SkinName)-$(Major).$(Minor).$(Build)-SkinPackage-Install</PackageName>
+		<PackageNameSource>$(CompanyName)-$(SkinName)-$(Major).$(Minor).$(Build)-SkinPackage-Source</PackageNameSource>
+		<ManifestFile>$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Release\_Pack\$(CompanyName)-$(SkinName).dnn</ManifestFile>
+	</PropertyGroup>
+	
+  <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" Condition="Exists('$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets')"/>
+
+ 
+  <Target Name="PackageSkin">
+		<Message Text="Create Folder: $(SkinPackageFolder)\" Importance="high"/>
+		<RemoveDir Directories="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\" />
+		<MakeDir Directories="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\" />
+		<CallTarget Targets="CopySkinFiles" />
+		<CallTarget Targets="CopyContainerFiles" />
+		<CallTarget Targets="CreateManifestFiles" />
+		<CallTarget Targets="CreatePackageZip" />
+		
+		<RemoveDir Directories="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\" />
+		
+  </Target>
+  
+  <Target Name="CopySkinFiles">
+	
+	<!-- Source -->
+	<MakeDir Directories="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Source\Skin\" />
+	
+	<CreateItem Include="$(SkinFolder)\**\*.*" Exclude="$(SkinFolder)\__SkinPack\**\*.*;$(SkinFolder)\__SkinPack\**\*.manifest;$(SkinFolder)\thumbnail*.*;$(SkinFolder)\.git\**\*.*;$(SkinFolder)\node_modules\**\*.*;" >
+		<Output ItemName="SkinFilesSource" TaskParameter="Include"/>
+	</CreateItem>
+	
+	<Copy SourceFiles="@(SkinFilesSource)" DestinationFolder="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Source\Skin\%(RecursiveDir)" />
+	
+	<Message Text="## CREATE SKIN ZIP FILE" Importance="high"></Message>
+	<Delete Files="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Source\_Pack\SkinResources.zip" />
+	<Exec Command="&quot;C:\Program Files\7-Zip\7z.exe&quot; a -r &quot;$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Source\_Pack\SkinResources.zip&quot; &quot;$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Source\Skin\*&quot;" />
+	
+	<RemoveDir Directories="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Source\Skin\" />
+
+
+
+	<!-- Release -->
+	<MakeDir Directories="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Release\Skin\" />
+	
+		<CreateItem Include="$(SkinFolder)\**\*.*" Exclude="$(SkinFolder)\__SkinPack\**\*.*;$(SkinFolder)\thumbnail*.*;$(SkinFolder)\src\**\*.*;$(SkinFolder)\**\less\**\*.*;$(SkinFolder)\.git\**\*.*;$(SkinFolder)\.git\**\*.*;$(SkinFolder)\_src\**\*.*;$(SkinFolder)\node_modules\**\*.*;$(SkinFolder)\.vscode\**\*.*;$(SkinFolder)\gulpfile.js;$(SkinFolder)\package*.json;$(SkinFolder)\*.md;$(SkinFolder)\.gitignore" >
+		<Output ItemName="SkinFilesRelease" TaskParameter="Include"/>
+	</CreateItem>
+	
+	<Copy SourceFiles="@(SkinFilesRelease)" DestinationFolder="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Release\Skin\%(RecursiveDir)" />
+	
+	<Message Text="## CREATE SKIN ZIP FILE" Importance="high"></Message>
+	<Delete Files="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Release\_Pack\SkinResources.zip" />
+	<Exec Command="&quot;C:\Program Files\7-Zip\7z.exe&quot; a -r &quot;$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Release\_Pack\SkinResources.zip&quot; &quot;$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Release\Skin\*&quot;" />
+	
+	<RemoveDir Directories="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Release\Skin\" />
+	
+  </Target>
+  
+  
+  
+  
+  <Target Name="CopyContainerFiles">
+	
+	<!-- Source -->
+	<MakeDir Directories="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Source\Container\" />
+	
+	<CreateItem Include="$(ContainerFolder)\**\*.*" Exclude="$(ContainerFolder)/thumbnail*.*;$(ContainerFolder)\.git\**\*.*;$(ContainerFolder)\Less\;$(ContainerFolder)\Sass\;" >
+		<Output ItemName="ContainerFilesSource" TaskParameter="Include"/>
+	</CreateItem>
+	
+	<Message Text="## COPY CONTAINERFILES" Importance="high"></Message>
+	<Copy SourceFiles="@(ContainerFilesSource)" DestinationFolder="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Source\Container\%(RecursiveDir)" />
+
+	<Message Text="## CREATE CONTAINER ZIP FILE" Importance="high"></Message>
+	<Delete Files="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Source\_Pack\ContainerResources.zip" />
+	<Exec Command="&quot;C:\Program Files\7-Zip\7z.exe&quot; a -r &quot;$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Source\_Pack\ContainerResources.zip&quot; &quot;$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Source\Container\*&quot;" />
+	
+	<RemoveDir Directories="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Source\Container\" />
+	
+	<!--Release -->
+	<MakeDir Directories="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Release\Container\" />
+	
+	<CreateItem Include="$(ContainerFolder)\**\*.*" Exclude="$(ContainerFolder)/thumbnail*.*;$(ContainerFolder)\.git\**\*.*;;$(ContainerFolder)\Less\;" >
+		<Output ItemName="ContainerFilesRelease" TaskParameter="Include"/>
+	</CreateItem>
+	
+	<Message Text="## COPY CONTAINERFILES" Importance="high"></Message>
+	<Copy SourceFiles="@(ContainerFilesRelease)" DestinationFolder="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Release\Container\%(RecursiveDir)" />
+
+	<Message Text="## CREATE CONTAINER ZIP FILE" Importance="high"></Message>
+	<Delete Files="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Release\_Pack\ContainerResources.zip" />
+	<Exec Command="&quot;C:\Program Files\7-Zip\7z.exe&quot; a -r &quot;$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Release\_Pack\ContainerResources.zip&quot; &quot;$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Release\Container\*&quot;" />
+	
+	<RemoveDir Directories="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Release\Container\" />
+	
+  </Target>
+  
+  
+  <Target Name="CreateManifestFiles">
+  
+	<!-- Copy Tempalte files to Package Release folder -->
+ 	<Copy SourceFiles="$(MSBuildProjectDirectory)\_Templates\Manifest.dnn" DestinationFiles="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Release\_Pack\$(CompanyName)-$(SkinName).dnn" />
+	<Copy SourceFiles="$(MSBuildProjectDirectory)\_Templates\Release-Notes.htm" DestinationFiles="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Release\_Pack\$(CompanyName)-Release-Notes.htm" />
+	<Copy SourceFiles="$(MSBuildProjectDirectory)\_Templates\Skin-License.htm" DestinationFiles="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Release\_Pack\$(CompanyName)-Skin-License.htm" />
+	
+	<ItemGroup>
+		<Templates Include='$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Release\_Pack\*.htm;$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Release\_Pack\*.dnn' />
+	</ItemGroup>
+
+	<Time Format="yyyy-MM-dd">
+		<Output TaskParameter="FormattedTime" PropertyName="BuildDate" />
+	</Time>
+	
+	<Time Format="yyyy">
+		<Output TaskParameter="FormattedTime" PropertyName="Year" />
+	</Time>
+
+	<!-- Parse Package Manifest files in Release folder -->
+	<FileUpdate Files="@(Templates)" Regex="{SKINVERSION}" ReplacementText="$(Major).$(Minor).$(Build)" />
+	<FileUpdate Files="@(Templates)" Regex="{COMPANYNAME}" ReplacementText="$(CompanyName)" />
+	<FileUpdate Files="@(Templates)" Regex="{SKINNAME}" ReplacementText="$(SkinName)" />
+	<FileUpdate Files="@(Templates)" Regex="{COMPANYURL}" ReplacementText="$(CompanyUrl)" />
+	<FileUpdate Files="@(Templates)" Regex="{COMPANYEMAIL}" ReplacementText="$(CompanyEmail)" />
+	<FileUpdate Files="@(Templates)" Regex="{SKINDESCRIPTION}" ReplacementText="$(SkinDescription)" />
+	<FileUpdate Files="@(Templates)" Regex="{COREVERSION}" ReplacementText="$(CoreVersion)" />
+	<FileUpdate Files="@(Templates)" Regex="{RELEASEDATE}" ReplacementText="$(BuildDate)" />
+	<FileUpdate Files="@(Templates)" Regex="{RELEASEYEAR}" ReplacementText="$(Year)" />
+	
+	<!-- Copy parsed files from Release folder -->
+	<Copy SourceFiles="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Release\_Pack\$(CompanyName)-$(SkinName).dnn" DestinationFolder="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Source\_Pack\" />
+	<Copy SourceFiles="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Release\_Pack\$(CompanyName)-Release-Notes.htm" DestinationFolder="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Source\_Pack\" />
+	<Copy SourceFiles="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Release\_Pack\$(CompanyName)-Skin-License.htm" DestinationFolder="$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Source\_Pack\" />
+	
+  </Target>
+  
+  <Target Name="CreatePackageZip">
+  
+	<Exec Command="&quot;C:\Program Files\7-Zip\7z.exe&quot; a -r &quot;$(MSBuildProjectDirectory)\$(SkinPackageFolder)\$(PackageName).zip&quot; &quot;$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Release\_Pack\*&quot;" />
+	
+	<Exec Command="&quot;C:\Program Files\7-Zip\7z.exe&quot; a -r &quot;$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Source\$(PackageNameSource).zip&quot; &quot;$(MSBuildProjectDirectory)\$(SkinPackageFolder)\Files\Source\_Pack\*&quot;" />
+		
+  </Target>
+  
+  
+
+</Project>
+
+

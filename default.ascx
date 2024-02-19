@@ -17,10 +17,7 @@
 <%@ Register TagPrefix="fortyfingers" TagName="STYLEHELPER" Src="~/DesktopModules/40Fingers/SkinObjects/StyleHelper/StyleHelper.ascx" %>
 
 
-	<!-- FontAwsome 5 + 4 shim-->
-	<dnn:DnnCssInclude runat="server" FilePath="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" Name="fontawesome" Version="5.15.4" Priority="15"  />
-	<dnn:DnnCssInclude runat="server" FilePath="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/v4-shims.min.css" Name="fontawesome-shim4" Version="5.15.4" Priority="15" />
-
+<!-- #include file="Includes/font-awesome.ascx" -->
 
 
 
@@ -100,8 +97,7 @@
             </div>
  
         <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+        <dnn:DnnJsInclude runat="server" ForceProvider="DnnFormBottomProvider" FilePath="vendors/bootstrap/js/bootstrap.bundle.min.js" PathNameAlias="SkinPath" />
 
 
         <!-- Core theme JS-->

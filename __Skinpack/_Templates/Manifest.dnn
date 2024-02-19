@@ -1,0 +1,67 @@
+﻿<dotnetnuke type="Package" version="5.0">
+	<packages>
+	<package name="{SKINNAME}.Skin" type="Skin" version="{SKINVERSION}">
+		<friendlyName>{SKINNAME}</friendlyName>
+		<description>{SKINDESCRIPTION} Skin</description>
+		<license src="{COMPANYNAME}-Skin-License.htm" />
+		<releaseNotes src="{COMPANYNAME}-Release-Notes.htm" />
+		<owner>
+		<name>{COMPANYNAME}</name>
+		<organization>{COMPANYNAME}</organization>
+		<url>{COMPANYURL}</url>
+		<email>{COMPANYEMAIL}</email>
+		</owner>
+		<dependencies>
+		<dependency type="CoreVersion">{COREVERSION}</dependency>
+		<dependency type="managedPackage" version="2.15.0">40Fingers_StyleHelper</dependency>
+		</dependencies>
+		<components>
+		<component type="Skin">
+			<skinFiles>
+			<skinName>{SKINNAME}</skinName>
+			<basePath>Portals\_default\Skins\{SKINNAME}</basePath>
+			</skinFiles>
+		</component>
+		<component type="ResourceFile">
+			<resourceFiles>
+			<basePath>Portals\_default\Skins\{SKINNAME}</basePath>
+			<resourceFile>
+				<name>SkinResources.zip</name>
+			</resourceFile>
+			</resourceFiles>
+		</component>
+		</components>
+	</package>
+	<package name="{SKINNAME}.Container" type="Container" version="{SKINVERSION}">
+		<friendlyName>{SKINNAME}</friendlyName>
+		<description>{SKINDESCRIPTION} Container</description>
+		<license src="{COMPANYNAME}-Skin-License.htm" />
+		<releaseNotes src="{COMPANYNAME}-Release-Notes.htm" />
+		<owner>
+		<name>{COMPANYNAME}</name>
+		<organization>40Fingers</organization>
+		<url>{COMPANYURL}</url>
+		<email>{COMPANYEMAIL}</email>
+		</owner>
+		<dependencies>
+		<dependency type="CoreVersion">{COREVERSION}</dependency>
+		</dependencies>
+		<components>
+		<component type="Container">
+			<containerFiles>
+			<containerName>{SKINNAME}</containerName>
+			<basePath>Portals\_default\Containers\{SKINNAME}</basePath>
+			</containerFiles>
+		</component>
+		<component type="ResourceFile">
+			<resourceFiles>
+			<basePath>Portals\_default\Containers\{SKINNAME}</basePath>
+			<resourceFile>
+				<name>ContainerResources.zip</name>
+			</resourceFile>
+			</resourceFiles>
+		</component>
+		</components>
+	</package>
+	</packages>
+</dotnetnuke>

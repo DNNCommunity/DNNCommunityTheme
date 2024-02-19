@@ -42,7 +42,7 @@
 
 	.text {
 		display: inline-block;
-		background: color.scale($blue-800, $alpha: -5%);
+		background: color.scale($col1-800, $alpha: -5%);
 		padding: 1em 1.1em;
 		max-width: 100%;
 		min-width: 33.33333%;
@@ -50,7 +50,7 @@
 
 		font-size: 0.75rem;
 		border-top: solid 3px $red;
-		border-bottom: solid 3px $blue;
+		border-bottom: solid 3px $col1;
 
 		@include media-breakpoint-up(md) {
 			font-size: 0.9rem;
