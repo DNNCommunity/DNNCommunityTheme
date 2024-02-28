@@ -1,7 +1,7 @@
 {
-  "name": "40FINGERS-DNN-Theme",
-  "version": "1.0.0",
-  "description": "40FINGERS DNN Theme",
+  "name": "DNNCommunityTheme",
+  "version": "2.0.0",
+  "description": "DNNCommunity Theme",
   "main": "default.aspx",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
@@ -12,7 +12,7 @@
     "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
-	"gulp-rename": "^2.0.0"
+    "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "sass": "^1.62.1"
@@ -21,6 +21,6 @@
     "glob-parent": "5.1.2"
   },
   "scripts": {},
-  "author": "Timo Breumelhof",
+  "author": "DNNCommunity Timo Breumelhof",
   "license": "MIT"
 }
