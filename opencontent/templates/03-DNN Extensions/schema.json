@@ -1,0 +1,61 @@
+{
+  "type": "object",
+  "properties": {
+    "Title": {
+      "type": "string",
+      "title": "Title"
+    },
+    "Dates": {
+      "type": "object",
+      "title": "Dates",
+      "properties": {
+        "StartDate": {
+          "title": "Start Date"
+        },
+        "EndDate": {
+          "title": "End Date"
+        },
+        "Text": {
+          "type": "string",
+          "title": "Text before date"
+        },
+        "Show": {
+          "type": "boolean",
+          "title": "Show Date"
+        }
+      }
+    },
+    "Intro": {
+      "type": "string",
+      "title": "Intro"
+    },
+    "Text": {
+      "type": "string",
+      "title": "Text"
+    },
+    "MainImage": {
+      "type": "string",
+      "title": "Main Image"
+    },
+    "ProjectUrl": {
+      "type": "string",
+      "title": "Project Url"
+    },
+    "ReleaseUrl": {
+      "type": "string",
+      "title": "Release Url"
+    },
+    "DocumentationUrl": {
+      "type": "string",
+      "title": "Documentation Url"
+    },
+    "Type": {
+      "type": "string",
+      "title": "Type (single)"
+    },
+    "Categories": {
+      "type": "array",
+      "title": "Categories"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "fields": {
+    "Title": {
+      "indexType": "text"
+    },
+    "Dates": {
+      "indexType": "object",
+      "fields": {
+        "StartDate": {
+          "indexType": "datetime",
+          "index": true,
+          "sort": true
+        },
+        "EndDate": {
+          "indexType": "datetime"
+        },
+        "Text": {
+          "indexType": "text"
+        },
+        "Show": {
+          "indexType": "boolean"
+        }
+      },
+      "index": true
+    },
+    "Intro": {
+      "indexType": "text"
+    },
+    "Text": {
+      "indexType": "html"
+    },
+    "MainImage": {
+      "indexType": "text"
+    },
+    "ProjectUrl": {
+      "indexType": "text"
+    },
+    "ReleaseUrl": {
+      "indexType": "text"
+    },
+    "DocumentationUrl": {
+      "indexType": "text"
+    },
+    "Type": {
+      "indexType": "key",
+      "index": true,
+      "sort": true
+    },
+    "Categories": {
+      "indexType": "key",
+      "index": true,
+      "sort": true,
+      "type": "array",
+      "items": {
+        "indexType": "key",
+        "index": true,
+        "sort": true
+      }
+    }
+  },
+  "index": true
+}

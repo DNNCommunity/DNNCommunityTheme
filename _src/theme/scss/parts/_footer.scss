@@ -1,0 +1,36 @@
+.skin-footer{
+    
+    margin-top: 0;
+
+    .footer-bottom{
+        
+        @include red-blue-border(top);
+
+        background: $skin-header-background;
+
+        li{
+            padding: 0.5em 1em;
+            color: $white;
+            list-style-type: none;
+
+            a{
+
+                color: $white;
+            }
+        }
+    }
+}
+
+// Fixed footer
+.page-content-wrapper {
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.skin-main {
+
+    flex-grow: 1;
+}

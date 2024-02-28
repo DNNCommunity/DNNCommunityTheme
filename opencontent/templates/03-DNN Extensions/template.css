@@ -1,0 +1,113 @@
+.oc-dnn-extensions h3 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+.oc-dnn-extensions h4 {
+  font-size: 1.2em;
+}
+.oc-dnn-extensions h4 a {
+  color: #00aeef;
+}
+
+.oc-dnn-extensions .intro{
+	
+	font-weight:bold;
+	margin-bottom:1em;
+}
+
+.oc-dnn-extensions .dates{
+	
+font-size:1.1em;
+color: #3b8ead;
+
+
+}
+.oc-dnn-extensions .dates span:last-child{
+	
+	color: #00aeef;
+}
+.oc-dnn-extensions .jplist-panel {
+  padding: 1em 0;
+  border-top: solid 1px #00aeef;
+}
+.oc-dnn-extensions .jplist-panel input {
+  border: solid 1px #00aeef;
+  padding: 0.5em;
+}
+.oc-dnn-extensions .jplist-hidden {
+  display: none;
+}
+.oc-dnn-extensions .jplist-no-results {
+  padding: 1em 0;
+  border: solid 1px #00aeef;
+  border-width: 1px 0;
+  color: #d34a50;
+}
+.oc-dnn-extensions .jplist-group {
+  padding-top: 0;
+}
+.oc-dnn-extensions .jplist-group span {
+  white-space: nowrap;
+  color: #00aeef;
+  margin: 0 1em 0 0;
+}
+@media screen and (min-width: 768px) {
+  .oc-dnn-extensions .jplist-group span {
+    margin: 0 0 0 1em ;
+  }
+}
+.oc-dnn-extensions .text-right {
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .oc-dnn-extensions .text-right {
+    text-align: right;
+  }
+}
+.oc-dnn-extensions section {
+  margin-bottom: 1em;
+}
+@media screen and (min-width: 768px) {
+  .oc-dnn-extensions section {
+    margin-bottom: 0;
+  }
+}
+.oc-dnn-extensions img {
+  max-width: 300px;
+}
+@media screen and (min-width: 768px) {
+  .oc-dnn-extensions img {
+    max-width: 100%;
+  }
+}
+.oc-dnn-extensions .items {
+  border-top: solid 1px #00aeef;
+}
+.oc-dnn-extensions .items h3 {
+  margin: 0.5em 0 0;
+  color: #d34a50;
+}
+.oc-dnn-extensions .items h4 {
+  margin-top: 0;
+}
+.oc-dnn-extensions .items .item {
+  padding: 1.5em 0;
+  border-bottom: solid 1px #00aeef;
+}
+.oc-dnn-extensions .items .links a {
+  display: block;
+  background: #eee;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  min-width: 10em;
+}
+.oc-dnn-extensions .items .links a:link,
+.oc-dnn-extensions .items .links a:visited {
+  color: #00aeef;
+}
+.oc-dnn-extensions .items .links a:hover {
+  color: #d34a50;
+}
+.oc-dnn-extensions .items .categories {
+  margin-top: 1.5em;
+}

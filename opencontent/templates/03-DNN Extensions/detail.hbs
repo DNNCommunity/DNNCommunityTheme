@@ -1,0 +1,30 @@
+<div class="multi-items detail">
+		<div class="mi-item">
+			<h2>
+				<a href="{{Context.DetailUrl}}">{{Title}}</a>
+				{{#if Context.IsEditable}} <a href="{{Context.EditUrl}}"><img src="/icons/sigma/Edit_16x16_Gray.png" alt="edit" /></a>{{/if}}
+			</h2>
+			<div class="mi-intro">
+				{{Intro}}
+			</div>
+			<div class="mi-text">
+				{{Text}}
+			</div>
+			<hr />
+			{{#if Type}}
+			<div class="mi-type">
+				<strong>Type: {{Type.Title}}</strong>
+			</div>
+			{{/if}}
+			{{#if Categories}}
+			<div class="mi-categories">
+				<strong>Categories: </strong>
+					{{#each Categories}}
+						{{Title}}{{#unless @last}},{{/unless}}
+					{{/each}}
+			</div>
+			{{/if}}
+			<hr />
+			<a href="{{Context.MainUrl}}" class="mi-bcktolist">{{@root.Settings.BackText}}</a>
+		</div>
+</div>

@@ -1,0 +1,40 @@
+{
+  "formtype": "object",
+  "formfields": [
+    {
+      "fieldname": "BackText",
+      "fieldtype": "text",
+      "title": "Back To List Text",
+      "default": "Back To List",
+      "advanced": true
+    },
+    {
+      "fieldname": "CountTitle",
+      "fieldtype": "text",
+      "title": "Title for Counter on top",
+      "default": "Number of Extensions:",
+      "advanced": true
+    },
+    {
+      "fieldname": "ProjectUrlText",
+      "fieldtype": "text",
+      "title": "Project Url Link Text",
+      "default": "Home Page",
+      "advanced": true
+    },
+    {
+      "fieldname": "ReleaseUrlText",
+      "fieldtype": "text",
+      "title": "Release Url Link Text",
+      "default": "Release",
+      "advanced": true
+    },
+    {
+      "fieldname": "DocumentationUrlText",
+      "fieldtype": "text",
+      "title": "Documentation Url Link Text",
+      "default": "Documentation",
+      "advanced": true
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+﻿{
+    "fields": {
+	"height": {
+				"type": "select",
+				"optionLabels": ["Image Size", "75%", "50%", "33%"],
+				"removeDefaultNone": true,
+				"sort": false
+			},
+			
+        "slider": {
+            "fields": {
+                "animation": {
+                },
+                "touch": {
+                    "helper": "Allow touch swipe navigation of the slider on touch-enabled devices"
+                },
+                "controlNav": {
+                    "helper": "Create navigation for paging control of each clide"
+                },
+                "directionNav": {
+                    "helper": "Create navigation for previous/next navigation"
+                }
+            }
+        }
+    }
+}

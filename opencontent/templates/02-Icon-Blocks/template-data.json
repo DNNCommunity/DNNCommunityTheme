@@ -1,0 +1,16 @@
+{
+  "Titles": {
+    "ModuleTitle": "test",
+    "SubTitle": "test",
+    "ShowTitles": true
+  },
+  "SinglePage": {},
+  "Style": {
+    "center": false,
+    "Item": {
+      "sm": "12",
+      "md": "4",
+      "lg": "4"
+    }
+  }
+}

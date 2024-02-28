@@ -1,0 +1,161 @@
+{{registerscript "jplist/js/jplist.core.min.js"}}
+{{registerscript "jplist/js/jplist.textbox-filter.min.js"}}
+{{registerscript "jplist/js/jplist.filter-toggle-bundle.min.js"}}
+
+
+
+<div id="oc-dnn-extensions-{{Context.ModuleId}}" class="oc-dnn-extensions list">
+	<h3>{{Settings.CountTitle}} <span class="item-count"></span></h3>
+	
+	<div class="jplist-panel clearfix">
+
+		<div class="row">
+			<div class="col-sm-4">
+
+				<!-- Filter by Text -->
+				<div class="text-filter-box">
+						   
+						   <input 
+							 data-path="h3, .intro" 
+							 type="text" 
+							 value="" 
+							 class="jplist-no-right-border"
+							 placeholder="Filter by Text" 
+							 data-control-type="textbox" 
+							 data-control-name="title-filter" 
+							 data-control-action="filter"
+						   />
+
+				</div>
+			</div>
+			<div class="col-sm-8 text-right">
+				
+				<!-- Filter by Type -->
+					<div class="jplist-group"
+					 data-control-type="checkbox-text-filter"
+					 data-control-action="filter"
+					 data-control-name="type-filter"
+					 data-id="type-filter"
+					 data-path=".type"
+					 data-logic="or">
+					 
+					{{#each AdditionalData.Type}}
+						 <span class="check">
+						  <label for="{{Title}}">{{Title}}</label>
+						 <input 
+						   value="{{Title}}"
+						   id="{{Title}}"
+						   data-path="type-{{Title}}"
+						   type="checkbox"
+						 />
+						
+						 </span>
+					{{/each}}{{/if}}
+						
+					</div>
+				
+				<!-- Filter by Category -->
+					<div class="jplist-group"
+					 data-control-type="checkbox-text-filter"
+					 data-control-action="filter"
+					 data-control-name="category-filter"
+					 data-id="category-filter"
+					 data-path=".category"
+					 data-logic="or">
+					 
+					{{#each AdditionalData.Categories}}
+						 <span class="check">
+						  <label for="{{Title}}">{{Title}}</label>
+						 <input 
+						   value="{{Title}}"
+						   id="{{Title}}"
+						   data-path="category-{{Title}}"
+						   type="checkbox"
+						 />
+						
+						 </span>
+					{{/each}}{{/if}}
+						
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="items">
+		{{#each Items}}
+			<div class="item">
+			<div class="row">
+			
+				{{#if MainImage.url}}
+				<aside class="col-xs-12 col-sm-2 text-center">
+				<img src="{{MainImage.url}}" alt="{{Title}}" />
+				</aside>
+				
+				<div class="col-xs-12 col-sm-7">
+				
+				{{else}}
+				<div class="col-xs-12 col-sm-9">
+				{{/if}}
+			
+				
+				<header>
+				<h3 class="title">
+					{{Title}}
+					{{#if Context.IsEditable}} <a href="{{Context.EditUrl}}"><img src="/icons/sigma/Edit_16x16_Gray.png" alt="edit" /></a>{{/if}}
+				</h3>
+				
+				{{#if Dates.StartDate}}<h4 class="dates">{{#if Dates.Text}}<span>{{Dates.Text}}</span> {{/if}}<span>{{formatDateTime Dates.StartDate "yyyy-MM-dd"}}{{#if Dates.EndDate}} to {{formatDateTime Dates.EndDate "yyyy-MM-dd"}}{{/if}}</span></h4>{{/if}}
+				<h4 class="type {{Type.Title}}"><a class="type-link" data-id="{{Type.Title}}" href="#">{{Type.Title}}</a></h4>
+				
+				<h4 class="type {{Type.Title}}"><a class="type-link" data-id="{{Type.Title}}" href="#">{{Type.Title}}</a></h4>
+				
+				</header>
+				<section >
+					<div class="intro">
+					{{Intro}}
+					</div>
+					<div class="description">
+					{{Text}}
+					</div>
+					<div class="categories">
+					{{#each Categories}}
+						<a class="category-link" data-id="{{Title}}" href="#"><span class="category">{{Title}}</span></a>{{#if @last}} {{else}}, {{/if}}
+					{{/each}}
+					</div>
+
+				</section>
+				</div>
+					<aside class="col-xs-12 col-sm-3">
+						<div class="links">
+						{{#if ProjectUrl}}
+						<div class="link">
+						<a href="{{ProjectUrl}}" target="_blank"><i class="demo-icon icon-home-1"></i> {{#if @root.Settings.ProjectUrlText}}{{@root.Settings.ProjectUrlText}}{{else}}Text in Template Settings{{/if}}</a>
+						</div>
+						{{/if}}
+						{{#if ReleaseUrl}}
+						<div class="link">
+						<a href="{{ReleaseUrl}}" target="_blank"><i class="demo-icon icon-download-alt"></i> {{#if @root.Settings.ReleaseUrlText}}{{@root.Settings.ReleaseUrlText}}{{else}}Text in Template Settings{{/if}}</a>
+						</div>
+						{{/if}}
+						{{#if DocumentationUrl}}
+						<div class="link">
+						<a href="{{DocumentationUrl}}" target="_blank"><i class="demo-icon icon-info"></i> {{#if @root.Settings.DocumentationUrlText}}{{@root.Settings.DocumentationUrlText}}{{else}}Text in Template Settings{{/if}}</a>
+						</div>
+						{{/if}}
+					</div>
+				</aside>
+				</div>
+			</div>
+		{{/each}}
+	</div>
+	
+	   <!-- no results found -->
+   <div class="jplist-no-results">
+	  No results found
+   </div>
+</div>
+<script>
+	jplistSselector = '#oc-dnn-extensions-{{Context.ModuleId}}'
+</script>
+
+

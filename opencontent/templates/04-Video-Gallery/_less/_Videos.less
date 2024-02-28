@@ -1,0 +1,217 @@
+@GreyLight: #ddd;
+@GreySuperLight: #f7f7f7;
+@ContentBlockItemsMargin: 2em;
+
+
+
+.oc-videos{
+
+	.h4(){
+		font-size: 1.1em;
+		margin-bottom: 0.8em;
+		font-weight:600;
+	}
+	// Filters
+
+	.text-filter-box, .category-filter{
+		margin: 0 0 1em;
+	}
+	
+	.category-filter{
+		.check{
+			margin-right: 0.8em;
+		}
+	}
+	
+	.itembar{
+		background:@GreySuperLight;
+		text-align:right;
+		padding: 0.1em 0.3em;
+		color:#fff;
+	}
+	
+	.item{
+		margin-bottom: @ContentBlockItemsMargin;
+		
+		.title{
+			.h4;
+			
+		}
+		.wrap-content{
+			display:flex;
+			flex-direction: column;
+			min-height:100%;
+			
+			header{
+				flex-grow:1;
+				background: @GreySuperLight;
+				padding: 1em 1.3em;
+				
+				p{
+					&:last-child{
+						margin:0;
+					}
+				}
+			
+				// Text below Video
+				.text-below&{
+					order: 1;
+				}
+				
+				.category{
+					display:none;
+				}
+			}
+			
+			section{
+			width:100%;
+			background:@GreyLight;
+			}
+		}
+	
+	}
+	
+	
+	#effect(){
+		position:relative;
+		overflow: hidden;
+	}
+	
+	#effect-overlay(){
+		content:" ";
+		display:block;
+		position:absolute;
+		
+	}
+	
+	#effect-cover{
+		bottom:0;
+		width:100%;
+		height:100%;
+	}
+	
+	#effect-hover(){
+		&:hover{
+			&:after{
+				bottom: -100%;
+				transition: bottom 0.5s;
+			}
+		}
+	}
+	
+	#zig-zag(){
+		background: 
+		linear-gradient(135deg, rgba(128,128,128,0.3) 25%, transparent 25%) -10px 0,
+		linear-gradient(225deg, rgba(128,128,128,0.3) 25%, transparent 25%) -10px 0,
+		linear-gradient(315deg, rgba(128,128,128,0.3) 25%, transparent 25%),
+		linear-gradient(45deg, rgba(128,128,128,0.3) 25%, transparent 25%);	
+		background-size: 20px 20px;
+	}
+
+	.effect{	
+		
+	
+	
+		&-darker{
+			#effect;
+			
+			&:after{
+				#effect-overlay;
+				#effect-cover;
+				background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8));
+				transition: bottom 0.5s;
+				
+			}
+			#effect-hover;
+		}
+		
+		&-lighter{
+			#effect;
+			
+			&:after{
+				#effect-overlay;
+				#effect-cover;
+				background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.8));
+				transition: bottom 0.5s;
+			}
+			#effect-hover;
+		}
+	
+		&-stripes{
+			#effect;
+		
+			&:after{
+				#effect-overlay;
+				#effect-cover;
+				background: repeating-linear-gradient(
+				  -55deg,
+				  rgba(128,128,128,0.2),
+				  rgba(128,128,128,0.2) 4px,
+				  rgba(128,128,128,0.4) 4px,
+				  rgba(128,128,128,0.4) 8px
+				);
+			}
+			#effect-hover;
+		}
+		
+		&-zigzag{
+			#effect;
+			
+			&:after{
+				#effect-overlay;
+				#effect-cover;
+				#zig-zag;
+			}
+			
+			#effect-hover;
+		}
+		
+		&-arrow{
+			#effect;
+			
+			
+			&:after{
+				#effect-overlay;
+				#effect-cover;
+				width:56.25%;
+				padding-top:56.25%;
+				left: -40%;
+				top:0;
+				transform: rotate(45deg);
+				background: rgba(40,40,40,0.3);
+				box-shadow: 0 0 20px rgba(255,255,255,0.3);
+				transition: left 0.5s;
+			}
+			
+			&:hover{
+				&:after{
+					left: -20%;
+					transition: left 0.5s;
+				}
+			}
+		}
+	}
+	
+	
+	img{-ms-interpolation-mode: bicubic; }
+	iframe{max-width:100%;}
+
+	.video-16-9{
+
+		position: relative;
+		padding-bottom: 56.25%; /* 16:9 */
+		height: 0;
+
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+	}
+	
+	
+
+}
