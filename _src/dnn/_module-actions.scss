@@ -1,0 +1,13 @@
+div.actionMenu{
+    ul.dnn_mact{
+        padding-left: 0;
+    }
+} 
+
+//For some reason the dropdown items have a fixed height herer: https://github.com/dnnsoftware/Dnn.Platform/blob/4b31e418212876ae4d68eddec224d70469691c91/DNN%20Platform/Website/admin/Menus/ModuleActions/ModuleActions.css#L112
+// This breaks them if the font is scaled See also: https://github.com/dnnsoftware/Dnn.Platform/issues/5783
+
+div.actionMenu ul.dnn_mact > li.actionMenuMove > ul li {
+    height: auto;
+    font-family:inherit;
+}

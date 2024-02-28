@@ -1,3 +1,4 @@
-node_modules/
-build/
-dist/
+/__Skinpack/[0-9]*
+/vendors
+/node_modules
+thumbnail*.*

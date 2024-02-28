@@ -1,0 +1,32 @@
+{
+    "editWitoutPostback": true,
+    "index": true,
+	
+	"detailMetaTitle": "{{Title}}",
+    "detailMetaDescription": "{{Intro}}",
+    "detailUrl": "{{Title}}",
+	
+    "templates": {
+        "template": {
+            "type": "multiple",
+            "title": "List",            
+            "main": {
+                "template": "template.hbs",
+				"clientSideData": false,
+				"additionalDataInTemplate": true,
+				 "dnnsearch": false
+            }
+        }
+    },
+	"additionalData": {
+			"Type": {
+				"title": "Type",
+				"scope": "module" /* tabmodule, module, tab, portal */
+			},
+			"Categories": {
+				"title": "Categories",
+				"scope": "module" /* tabmodule, module, tab, portal */
+			}
+		}
+
+}

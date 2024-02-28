@@ -1,0 +1,39 @@
+{
+  "fields": {
+	"Texts": {
+			"fields": {
+				"Title": {
+						"type": "mltext"
+					
+				},
+				"Text": {
+					"type": "mlckeditor"
+				}
+			}
+		}
+	,
+	"Visuals": {
+		"fields": {
+				"Icon":{
+					"type": "icon",
+					"title": "Icon"
+				}
+
+
+		}
+	},
+	
+
+
+          "ButtonText": {
+            "type": "text"
+          },
+		  "Url": {
+            "type": "mlurl"
+          },
+
+    "SortIndex": {
+      "hidden": true
+    }
+  }
+}

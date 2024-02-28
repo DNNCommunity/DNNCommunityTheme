@@ -1,0 +1,93 @@
+{
+	"type": "object",
+	"properties": {
+		"Module": {
+			"type": "object",
+			"title": "Module Settings",
+			"properties": {
+				"ModuleTitle": {
+					"type": "string",
+					"title": "Top Title",
+					"required": true
+				},
+				"SubTitle": {
+					"type": "string",
+					"title": "Sub Title"
+				},
+				"ShowTitles": {
+					"type": "boolean",
+					"title": "Show Titles block on top?",
+					"default": true
+				},
+				"BackgroundColor": {
+					"title": "Background Color",
+					"type": "string",
+					"enum": [
+						"bg-none",
+						"bg-white",
+						"bg-grey",
+						"bg-color",
+						"bg-black"
+					]
+				},
+				"SinglePageMenuName": {
+					"type": "string",
+					"title": "Single Page Menu Title",
+					"helper": "Only for sites with only one page"
+				}
+			}
+		},
+		"Style": {
+			"type": "object",
+			"title": "Item Style",
+			"properties": {
+				"center": {
+					"title": "Center Content",
+					"type": "boolean"
+				},
+				"Item": {
+					"type": "object",
+					"title": "Item Width",
+					"properties": {
+						"sm": {
+							"type": "string",
+							"title": "Mobile: nr. of Columns",
+							"enum": [
+								"12",
+								"6"
+							],
+							"default": "12"
+						},
+						"md": {
+							"type": "string",
+							"title": "Tablet █ Columns",
+							"enum": [
+								"auto",
+								"12",
+								"6",
+								"4",
+								"3",
+								"10-2",
+								"2"
+							],
+							"default": "4"
+						},
+						"lg": {
+							"type": "string",
+							"title": "Desktop: nr. of Columns",
+							"enum": [
+								"12",
+								"6",
+								"4",
+								"3",
+								"10-2",
+								"2"
+							],
+							"default": "4"
+						}
+					}
+				}
+			}
+		}
+	}
+}

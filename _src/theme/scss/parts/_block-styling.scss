@@ -1,0 +1,129 @@
+
+// verical inline align class
+.flex-vert-align {
+    display: flex;
+    align-items: center;
+}
+
+
+// backgrounds
+.bg {
+    &-blue {
+        background: $col1;
+
+        --heading-color: #{$col1-900};
+
+        a {
+            color: $white;
+            &:not(.btn){
+                text-decoration: underline;
+            }
+        }
+
+        h1, .h1,
+        h2, .h2,
+        h3, .h3,
+        h4, .h4, 
+        h5, .h5, 
+        h6, .h6
+        {
+            color: $white;
+        }
+
+        &-dark {
+            background: $col1-700;
+        
+            a {
+                color: $red;
+                text-decoration: none;
+            }
+        
+        }
+        &-extra-dark {
+            background: $col1-800;
+        }
+
+        &-super-dark {
+            background: $col1-900;
+        }
+    }
+
+    &-red {
+        background: $red;
+        --heading-color: #{$white};
+    
+        a {
+            color: inherit;
+        }
+    }
+
+    &-grey{
+
+        background: lighten($gray-100, 3%);
+
+        .dnnModuleManager{
+            border-color: $gray-600;
+        }
+    }
+
+
+}
+
+$skew-dist-y: 70px;
+$skew-dist-y-extra: 2px;
+$skew-dist-correction: 30px; // As the skew creates quite a large space at the top you can eliminate a part of this using this value.
+
+
+.skew {
+
+    &-top,
+    &-bottom {
+        position: relative;
+        > .container{
+            margin-top: -$skew-dist-correction;
+            margin-bottom: -$skew-dist-correction;
+        }
+    }
+}
+
+.skew-top {
+
+    margin-top: $skew-dist-y;
+
+    &:before {
+        content: '';
+        display:block;
+        width: 100%;
+        height: $skew-dist-y + $skew-dist-y-extra;
+        position:relative;
+        background:inherit;
+        z-index: 1;
+        top: -$skew-dist-y;
+        clip-path: polygon(0 100%, 0 $skew-dist-y - $skew-dist-y-extra, 100% 0, 100% 100%);
+    }
+}
+
+.skew-bottom {
+
+    margin-bottom: $skew-dist-y;
+
+    &:after {
+        content: '';
+        display:block;
+        width: 100%;
+        height: $skew-dist-y + $skew-dist-y-extra;
+        position:relative;
+        background: inherit;
+        z-index: 0;
+        bottom: -$skew-dist-y ;
+        clip-path: polygon(0 0, 100% 0, 100% $skew-dist-y-extra, 0 100%);
+    }
+}
+
+
+@mixin red-blue-border($location){
+    border-#{$location}: 3px solid;
+    border-image-slice: 1;
+    border-width: 3px;
+    border-image-source: linear-gradient(90deg, $col1 0%, $col1 50%, $red 50%);
+    }

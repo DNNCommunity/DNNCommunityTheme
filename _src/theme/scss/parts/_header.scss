@@ -1,0 +1,39 @@
+$skin-header-background: lighten($black, 15); //$gray-900;
+
+.skin-header{
+    background: $skin-header-background;
+
+    @include media-breakpoint-up(md) {
+     padding: 1em 0;
+     transition: padding 1s;
+
+     .window-scrolled &{
+        padding: 0;
+     }
+    }
+
+    @include red-blue-border(bottom);
+}
+
+// Header
+.dnn-logo {
+    padding-top: 0.9em;
+    padding-bottom: 0.9em;
+    display: flex;
+    align-items: center;
+
+    img {
+        max-height: 2.5em;
+    }
+
+    .community-text {
+        font-size: 1em;
+        display: inline-block;
+       
+        margin: 0.45em 0 0 0.65em;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-indent: -2.5em;
+        white-space: nowrap;
+    }
+}

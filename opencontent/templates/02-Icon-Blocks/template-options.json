@@ -1,0 +1,76 @@
+{
+  "fields": {
+	  "Module": {
+		  "fields": {
+				"ModuleTitle": {
+					"type": "mltext"
+				},
+
+				"SubTitle": {
+				  "type": "mltextarea"
+				},
+				"SinglePageMenuName": {
+					"type": "mltext"
+				},
+	  "BackgroundColor": {
+			"type": "select",
+			"optionLabels": ["Auto", "White", "Grey", "Colour", "Black"],
+			"removeDefaultNone": true,
+			"sort": false
+		  }
+		  }
+	  },
+    	"Style": {
+		  "fields": {
+				"Item":{
+					"fields": {
+						"sm": {
+						   "type": "select",
+							"sort": false,
+							"optionLabels": [
+								"1 Col = 100%",
+								"2 Cols = 50%"
+							  ],
+							  "noneLabel": "Not Set"
+							},
+							
+						 "md": {
+						   "type": "select",
+							"sort": false,
+							"optionLabels": [
+								"auto",
+								"1 Col = 100%",
+								"2 Cols = 50%",
+								"3 Cols = 33%",
+								"4 Cols = 25%",
+								"5 Cols = 20%",
+								"6 Cols = 16.6%"
+							  ],
+							  "noneLabel": "Not Set"
+							},
+							
+						"lg": {
+						   "type": "select",
+							"sort": false,
+							"optionLabels": [
+								"1 Col = 100%",
+								"2 Cols = 50%",
+								"3 Cols = 33%",
+								"4 Cols = 25%",
+								"5 Cols = 20%",
+								"6 Cols = 16.6%"
+							  ],
+							 "noneLabel": "Not Set"
+							},
+							
+					}
+				
+				}
+				
+
+
+			}
+		}
+	
+  }
+}

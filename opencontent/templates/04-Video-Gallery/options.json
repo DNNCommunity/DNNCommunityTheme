@@ -1,0 +1,73 @@
+{
+  "fields": {
+    "Videos": {
+      "type": "accordion",
+      "helper": "If you add a series of Videos, also enter \"Series\" below",
+      "items": {
+        "fields": {
+          "Title": {
+            "type": "text"
+          },
+          "YouTubeId": {
+            "type": "text"
+          },
+          "Description": {
+            "type": "ckeditor",
+            "configset": "basic"
+          },
+          "Icon": {
+            "type": "imagex",
+            "uploadhidden": false,
+            "uploadfolder": "OpenContent/Images/YouTube",
+            "fileExtensions": "gif|jpg|jpeg|tiff|png",
+            "fileMaxSize": 2000000,
+            "showOverwrite": true,
+            "overwrite": false,
+            "showCropper": false
+          }
+        }
+      }
+    },
+    "Link": {
+      "type": "url"
+    },
+    "Series": {
+      "type": "object",
+      "helper": "If this is a series that consists of multiple Videos",
+      "fields": {
+        "Title": {
+          "type": "text"
+        },
+        "Text": {
+          "type": "ckeditor",
+          "configset": "basic"
+        },
+        "Icon": {
+          "type": "imagex",
+          "uploadhidden": false,
+          "uploadfolder": "Images/OpenContent/Videos/Full",
+          "fileExtensions": "gif|jpg|jpeg|tiff|png",
+          "fileMaxSize": 2000000,
+          "showOverwrite": true,
+          "overwrite": false,
+          "showCropper": true,
+          "cropfolder": "Images/OpenContent/Videos/Cropped",
+          "saveCropFile": true,
+          "width": 1280,
+          "height": 720
+        }
+      }
+    },
+    "Categories": {
+      "type": "select2",
+      "dataService": {
+        "action": "LookupData",
+        "data": {
+          "dataKey": "Categories",
+          "valueField": "Id",
+          "textField": "Title"
+        }
+      }
+    }
+  }
+}

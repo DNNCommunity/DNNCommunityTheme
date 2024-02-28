@@ -1,0 +1,342 @@
+{
+  "formfields": [
+    {
+      "fieldname": "Texts",
+      "title": "Texts",
+      "fieldtype": "object",
+      "subfields": [
+        {
+          "fieldname": "ModuleTitle",
+          "title": "Block Title (not visible)",
+          "fieldtype": "text",
+          "advanced": true,
+          "required": true,
+          "hidden": false,
+          "multilanguage": false,
+          "position": "1col1",
+          "dependencies": []
+        },
+        {
+          "fieldname": "Intro",
+          "title": "Intro Text",
+          "fieldtype": "ckeditor",
+          "ckeditoroptions": {},
+          "advanced": false
+        },
+        {
+          "fieldname": "Series",
+          "title": "Term used for Series",
+          "fieldtype": "text",
+          "advanced": true,
+          "required": true,
+          "hidden": false,
+          "default": "Series",
+          "multilanguage": true,
+          "position": "1col1",
+          "dependencies": []
+        },
+        {
+          "fieldname": "External",
+          "title": "External Link Term",
+          "fieldtype": "text",
+          "advanced": false
+        },
+        {
+          "fieldname": "BackToList",
+          "title": "Back to List Button",
+          "fieldtype": "text",
+          "advanced": true,
+          "required": true,
+          "hidden": false,
+          "multilanguage": true,
+          "position": "1col1",
+          "dependencies": []
+        },
+        {
+          "fieldname": "BackTop",
+          "title": "Show Back Button on Top",
+          "fieldtype": "checkbox",
+          "advanced": true,
+          "required": false,
+          "hidden": false,
+          "default": "false",
+          "position": "1col1",
+          "dependencies": []
+        },
+        {
+          "fieldname": "BackBottom",
+          "title": "Show Back Button at Bottom",
+          "fieldtype": "checkbox",
+          "advanced": true,
+          "required": false,
+          "hidden": false,
+          "default": "true",
+          "position": "1col1",
+          "dependencies": []
+        }
+      ],
+      "advanced": false
+    },
+    {
+      "fieldname": "Style",
+      "title": "Style",
+      "fieldtype": "object",
+      "subfields": [
+        {
+          "fieldname": "Item",
+          "title": "Item Layout",
+          "fieldtype": "object",
+          "subfields": [
+            {
+              "fieldname": "sm",
+              "title": "Mobile: nr. of Columns",
+              "fieldtype": "select",
+              "fieldoptions": [
+                {
+                  "value": "12",
+                  "text": "1 Col = 100%"
+                },
+                {
+                  "value": "6",
+                  "text": "2 Cols = 50%"
+                }
+              ],
+              "advanced": true,
+              "required": false,
+              "hidden": false,
+              "default": "12",
+              "position": "1col1",
+              "dependencies": []
+            },
+            {
+              "fieldname": "md",
+              "title": "Tablet █ Columns",
+              "fieldtype": "select",
+              "fieldoptions": [
+                {
+                  "value": "12",
+                  "text": "1 Col = 100%"
+                },
+                {
+                  "value": "6",
+                  "text": "2 Cols = 50%"
+                },
+                {
+                  "value": "4",
+                  "text": "3 Cols = 33%"
+                }
+              ],
+              "advanced": true,
+              "required": false,
+              "hidden": false,
+              "default": "12",
+              "position": "1col1",
+              "dependencies": []
+            },
+            {
+              "fieldname": "lg",
+              "title": "Desktop: nr. of Columns",
+              "fieldtype": "select",
+              "fieldoptions": [
+                {
+                  "value": "12",
+                  "text": "1 Col = 100%"
+                },
+                {
+                  "value": "6",
+                  "text": "2 Cols = 50%"
+                },
+                {
+                  "value": "4",
+                  "text": "3 Cols = 33%"
+                },
+                {
+                  "value": "3",
+                  "text": "4 Cols = 25%"
+                }
+              ],
+              "advanced": true,
+              "required": false,
+              "hidden": false,
+              "default": "12",
+              "position": "1col1",
+              "dependencies": []
+            },
+            {
+              "fieldname": "xl",
+              "title": "Desktop large: nr. of Columns",
+              "fieldtype": "select",
+              "fieldoptions": [
+                {
+                  "value": "12",
+                  "text": "1 Col = 100%"
+                },
+                {
+                  "value": "6",
+                  "text": "2 Cols = 50%"
+                },
+                {
+                  "value": "4",
+                  "text": "3 Cols = 33%"
+                },
+                {
+                  "value": "3",
+                  "text": "4 Cols = 25%"
+                }
+              ],
+              "advanced": true,
+              "required": false,
+              "hidden": false,
+              "default": "6",
+              "position": "1col1",
+              "dependencies": []
+            },
+            {
+              "fieldname": "xxl",
+              "title": "Desktop extra large: nr. of Columns",
+              "fieldtype": "select",
+              "fieldoptions": [
+                {
+                  "value": "12",
+                  "text": "1 Col = 100%"
+                },
+                {
+                  "value": "6",
+                  "text": "2 Cols = 50%"
+                },
+                {
+                  "value": "4",
+                  "text": "3 Cols = 33%"
+                },
+                {
+                  "value": "3",
+                  "text": "4 Cols = 25%"
+                }
+              ],
+              "advanced": true,
+              "required": false,
+              "hidden": false,
+              "default": "6",
+              "position": "1col1",
+              "dependencies": []
+            }
+          ],
+          "advanced": false
+        },
+        {
+          "fieldname": "SeriesEffect",
+          "title": "Series Image Effect",
+          "fieldtype": "select",
+          "fieldoptions": [
+            {
+              "value": "darker",
+              "text": "Darker"
+            },
+            {
+              "value": "lighter",
+              "text": "Lighter"
+            },
+            {
+              "value": "stripes",
+              "text": "Stripes"
+            },
+            {
+              "value": "zigzag",
+              "text": "Zig Zag Stripes"
+            },
+            {
+              "value": "arrow",
+              "text": "Arrow"
+            }
+          ],
+          "advanced": false
+        }
+      ],
+      "advanced": false
+    },
+    {
+      "fieldname": "Filters",
+      "title": "Filters",
+      "fieldtype": "object",
+      "subfields": [
+        {
+          "fieldname": "Text",
+          "title": "Show Text Filter",
+          "fieldtype": "checkbox",
+          "advanced": false
+        },
+        {
+          "fieldname": "Category",
+          "title": "Show Category Filter",
+          "fieldtype": "checkbox",
+          "advanced": false
+        }
+      ],
+      "advanced": false
+    },
+    {
+      "fieldname": "Options",
+      "title": "Video Options",
+      "fieldtype": "object",
+      "subfields": [
+        {
+          "fieldname": "NoCookies",
+          "title": "Use No Cookies Embed",
+          "fieldtype": "checkbox",
+          "advanced": true,
+          "required": false,
+          "hidden": false,
+          "default": "false",
+          "position": "1col1",
+          "dependencies": []
+        },
+        {
+          "fieldname": "Related",
+          "title": "Show External related Videos",
+          "fieldtype": "checkbox",
+          "advanced": true,
+          "required": false,
+          "hidden": false,
+          "default": "false",
+          "position": "1col1",
+          "dependencies": []
+        },
+        {
+          "fieldname": "Controls",
+          "title": "Show Video Controls",
+          "fieldtype": "checkbox",
+          "advanced": true,
+          "required": false,
+          "hidden": false,
+          "default": "false",
+          "position": "1col1",
+          "dependencies": []
+        },
+        {
+          "fieldname": "Fullscreen",
+          "title": "Show Full Screen Icon",
+          "fieldtype": "checkbox",
+          "advanced": true,
+          "required": false,
+          "hidden": false,
+          "default": "true",
+          "position": "1col1",
+          "dependencies": []
+        },
+        {
+          "fieldname": "Modestbranding",
+          "title": "Less Prominent YouTube Logo",
+          "fieldtype": "checkbox",
+          "advanced": true,
+          "required": false,
+          "hidden": false,
+          "default": "true",
+          "position": "1col1",
+          "dependencies": []
+        }
+      ],
+      "advanced": false
+    }
+  ],
+  "formtype": "object"
+}

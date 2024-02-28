@@ -1,0 +1,31 @@
+{
+    "type": "object",
+    "properties": {
+		"BackText": {
+				"title": "Back To List Text",
+				"type": "string",
+				"default": "Back To List"
+			},
+		"CountTitle": {
+			"title": "Title for Counter on top",
+			"type": "string",
+			"default": "Number of Extensions:"
+		},
+		
+		"ProjectUrlText":{
+			"title": "Project Url Link Text",
+			"type": "string",
+			"default": "Home Page"
+		},
+		"ReleaseUrlText":{
+			"title": "Release Url Link Text",
+			"type": "string",
+			"default": "Release"
+		},
+		"DocumentationUrlText":{
+			"title": "Documentation Url Link Text",
+			"type": "string",
+			"default": "Documentation"
+		}
+	}
+}

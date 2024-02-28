@@ -1,0 +1,60 @@
+{
+  "type": "object",
+  "properties": {
+  
+	"Texts": {
+		  "type": "object",
+		  "title": "Texts",
+		  	"properties": {
+				
+				"Title": {
+				  "type": "string",
+				  "title": "Title"
+				},
+
+				"Text": {
+				  "type": "string",
+				  "title": "Text"
+				}
+
+		}
+	},
+	"Visuals": {
+		  "type": "object",
+		  "title": "Visuals",
+			"properties": {
+				"Icon":{
+					"type": "string",
+					"title": "Icon Code"
+						}
+
+				
+
+
+		}
+	},
+
+
+          "ButtonText": {
+            "type": "string",
+            "title": "Button Text"
+          },
+			
+		  "Url": {
+            "type": "string",
+            "title": "Url"
+          },
+		  
+		  "NewWindow": {
+			"type": "boolean",
+			"title": "New Window"
+
+		  },
+	   
+    "SortIndex": {
+      "type": "number",
+      "title": "Sorting Order",
+      "default": 0
+    }
+  }
+}

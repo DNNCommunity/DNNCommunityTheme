@@ -1,0 +1,12 @@
+{
+  "parent": "dnnbootstrap-edit-horizontal",
+  "layout": {
+    "template": "<div><div class=\"row\"><div class=\"col-md-12\" id=\"pos_1_1\"></div></div></div>",
+    "bindings": {
+      "Videos": "#pos_1_1",
+      "Link": "#pos_1_1",
+      "Series": "#pos_1_1",
+      "Categories": "#pos_1_1"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.DnnModule-Journal{
+
+    .journalrow{
+        border-bottom: solid 1px $col1-200;
+        padding: 0 0 1.2em;
+        margin: 0 0 1.3em;
+        .author{
+            img{
+                border-radius: 50%;
+                overflow:hidden;
+                border: solid 2px $col1-100;
+            }
+        }
+
+        .journalitem{
+
+            > p:first-child{
+                font-size: 1.1em;
+                margin-bottom: 0.6em;
+            }
+            
+            .authorname{
+                a{
+                    color: $col1-700;
+                    
+                }
+            }
+
+            i{
+                br{
+                    display: none;
+                }
+            }
+            .journalfooter{
+                padding-top: 0.7em;
+                a:last-child{
+                    color: $red;
+                }
+            }
+        }
+    }
+}

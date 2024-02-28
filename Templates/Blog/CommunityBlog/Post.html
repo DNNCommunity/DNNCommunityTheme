@@ -1,0 +1,48 @@
+<article class="bbs-listarticle">
+  <div class="supertitle">[subtemplate|Cat.html|categories]</div>
+  <h2><a href="[Post:link]">[post:localizedtitle]</a></h2>
+  <div class="row">
+    <div class="col-md-4">
+      [subtemplate|ListImage.html|post:hasimage]
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-md-12">
+          [post:localizedsummary]
+        </div>
+      </div>
+      <div class="col-md-12 dnnc-list-meta">
+        <ul class="list">
+          <li class="list-item d-flex flex-wrap">
+            <a href="[urls:module|true]author=[post:CreatedByUserID]"><i class="fa fa-user"
+                aria-hidden="true"></i>[post:DisplayName]</a>
+
+                <div class="list-item list-post-date ms-4"><i class="fa fa-calendar"></i>
+                  <span data-time="[post:PublishedOnDate|yyyy-MM-dd HH:mm:ss]" class="moment">[post:PublishedOnDate|yyyy-MM-dd]
+                  </span>
+                </div>
+
+                <div class="list-item list-comments ms-4"><i class="fa fa-comment"></i>
+                  <span class="stat" title="[post:nrcomments] [resx:Comments]">[post:nrcomments]
+                  </span>
+                </div>
+
+
+          </li>
+          <li class="list-item">[subtemplate|Kw.html|keywords]</li>
+         
+           <!-- 
+          <li class="list-item "><i class="fa fa-eye"></i>
+           <div class="stat" title="[post:viewcount] [resx:Views]">[post:viewcount]</div> 
+          </li>
+          -->
+         
+        </ul>
+      </div>
+    </div>
+    <div class="clear"></div>
+    [if|1][Post:published][=]False[/if]
+    <div class="bg-danger">[resx:Unpublished]</div>
+    [endif|1]
+  </div>
+</article>
