@@ -32,7 +32,8 @@
 	runat="server" />
 
 
-		<div class="wrap-skin">
+	
+	        <div class="wrap-skin">
 
             <!-- Page content wrapper-->
             <div class="page-content-wrapper">
