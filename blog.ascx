@@ -32,7 +32,14 @@
 	runat="server" />
 
 
-		<div class="wrap-skin">
+    <fortyfingers:STYLEHELPER id="FFSH2" 
+	IfUrl="/blogs/Post/"
+	AddToBodyClass="blogs-detail"
+	runat="server" />
+
+
+	
+	        <div class="wrap-skin">
 
             <!-- Page content wrapper-->
             <div class="page-content-wrapper">
@@ -61,7 +68,7 @@
 					</div>
                 </header>
             </div>
-                <!-- #include file="Includes/panes.ascx" -->
+                <!-- #include file="Includes/panes-blog.ascx" -->
                 <footer class="skin-footer bg-blue-super-dark skew-top">
                     <div class="container py-5">
                         <div class="row gx-5">
