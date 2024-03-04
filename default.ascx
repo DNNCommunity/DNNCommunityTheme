@@ -32,6 +32,12 @@
 	runat="server" />
 
 
+    <fortyfingers:STYLEHELPER id="FFSH2" 
+	IfUrl="/blogs/Post/"
+	AddToBodyClass="blogs-detail"
+	runat="server" />
+
+
 	
 	        <div class="wrap-skin">
 

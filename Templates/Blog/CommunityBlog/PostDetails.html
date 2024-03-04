@@ -7,12 +7,11 @@
       <h1>[Post:localizedtitle]</h1>
     </header>
     <div class="row">
-      <div class="col-md-12">
-        [subtemplate|Postbanner.html|Post:hasimage]
-      </div>
-    </div>
-    <div class="row">
       <div class="col-md-8">
+        <div class="blog-image">
+          [subtemplate|Postbanner.html|Post:hasimage]
+         
+        </div>
         <div class="clearfix"><strong>[resx:WrittenBy]</strong> [post:DisplayName]
           <div data-time="[post:PublishedOnDate|yyyy-MM-dd HH:mm:ss]" class="momentabs">
             [post:PublishedOnDate|yyyy-MM-dd]</div>
