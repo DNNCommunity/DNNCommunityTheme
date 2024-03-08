@@ -1,58 +1,83 @@
-.blog-latest{
-    &-item{
-       // border: solid 1px $col1-700;
-        padding: 0.8em 0.9em;
-        background: lighten($gray-100, 5%);
-        position:relative;
-       
-        h3{
-            font-size: 1.1em;
-            margin: 0.5em 0;
-            color: $col1-800 !important
-        }
-        
-        height: 100%;
-        min-height: 100%;
+.ModBlogC {
 
-      
-    }
+    .blog-latest {
+        &-item {
+            // border: solid 1px $col1-700;
+            padding: 0.8em 0.9em;
+            background: lighten($gray-100, 5%);
+            position: relative;
 
-    &-link{
-        display:flex;
-        flex-direction: column ;
-        position:relative;
-        min-height: 100%;
-        &:hover{
-            color: $red;
+            h3 {
+                font-size: 1.1em;
+                margin: 0.5em 0;
+                color: $col1-800 !important
+            }
+
+            height: 100%;
+            min-height: 100%;
+
+
         }
 
-        &:visited{
-            color: $gray-500;
+        &-link {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            min-height: 100%;
+
+            &:hover {
+                color: $red;
+            }
+
+            &:visited {
+                color: $gray-500;
+            }
+        }
+
+        &-text-wrap {
+
+            flex-grow: 1;
+        }
+
+        &-text {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            max-height: 4.5em;
+            margin-bottom: 1em;
+
+        }
+
+        &-details {
+            font-size: 0.9em;
+            color: $gray-600;
+            border-top: solid 1px $gray-200;
+            padding-top: 0.3em;
+        }
+
+
+        .col-12 {
+            padding-bottom: 1.8em;
+        }
+
+    }
+
+    // Details side bar heading margin
+    .dnnc-blog-metadata {
+        h5 {
+            margin-top: 0;
         }
     }
-
-    &-text-wrap{
-
-        flex-grow: 1;
-    }
-    &-text{
-        text-overflow: ellipsis;
-        overflow:hidden;
-        max-height: 4.5em;
-        margin-bottom: 1em;
-        
-    }
-
-    &-details{
-        font-size: 0.9em;
-        color: $gray-600;
-        border-top: solid 1px $gray-200;
-        padding-top: 0.3em;
-    }
-
-
-    .col-12{
-        padding-bottom: 1.8em;
-    }
-
 }
+
+    // Make sure blog details  are full width (see https://github.com/DNNCommunity/DNNCommunityTheme/issues/141)
+    // Depends on the class injected by Style Helper
+
+    .blogs-detail {
+        .panes {
+            .main-blog-module{
+              
+                    width: 100% !important;
+
+            }
+        }
+    }
