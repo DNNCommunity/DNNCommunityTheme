@@ -72,12 +72,12 @@
     // Make sure blog details  are full width (see https://github.com/DNNCommunity/DNNCommunityTheme/issues/141)
     // Depends on the class injected by Style Helper
 
+
     .blogs-detail {
         .panes {
             .main-blog-module{
               
                     width: 100% !important;
-
-            }
+           }
         }
     }

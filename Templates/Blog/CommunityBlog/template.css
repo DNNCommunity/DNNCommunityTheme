@@ -108,7 +108,22 @@
 
 .ModBlogC .bbs-listarticle {
     overflow: hidden;
-    padding: 20px 0
+    padding: 1.2em 0
+}
+
+.ModBlogC .bbs-listarticle:first-child {
+    padding-top:0;
+}
+/* Unless the PB is visible */
+
+.personabar-visible .ModBlogC .bbs-listarticle:first-child {
+    padding-top:1.2em;
+}
+
+.ModBlogC .bbs-listarticle h2 {
+
+    margin-top:0;
+    
 }
 
 .ModBlogC .bbs-listarticle h2 a, .ModBlogC .bbs-listarticle h2 a:hover, .ModBlogC .bbs-listarticle h2 a:visited {
