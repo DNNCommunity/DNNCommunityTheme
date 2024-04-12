@@ -1,10 +1,13 @@
 # DNNCMS DNN Community Site Theme
-## Bootstrap 5 
 
 ![DNNCMS Community Site Theme Preview](default.jpg)
 
 ## About
 New (2023) DNN community site Theme.
+
+## Dependencies
+- [Bootstrap 5](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+- [StyleHelper](https://github.com/40fingers/StyleHelper-Sko)
 
 
 ## Notes:
