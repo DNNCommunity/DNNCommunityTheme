@@ -1,39 +1,38 @@
 {
-  "fields": {
-	"Texts": {
-			"fields": {
-				"Title": {
-						"type": "mltext"
-					
-				},
-				"Text": {
-					"type": "mlckeditor"
-				}
-			}
-		}
-	,
-	"Visuals": {
-		"fields": {
-				"Icon":{
-					"type": "icon",
-					"title": "Icon"
-				}
+   "fields": {
+      "Texts": {
+        "fields": {
+           "Title": {
+              "type": "text",
+              "multilanguage": true
 
+           },
+           "Text": {
+              "type": "ckeditor",
+              "multilanguage": true
+           }
+        }
+      },
+      "Visuals": {
+        "fields": {
+           "Icon": {
+              "type": "icon",
+              "title": "Icon"
+           }
 
-		}
-	},
-	
+        }
+      },
 
+      "ButtonText": {
+        "type": "text"
+      },
+      "Url": {
+        "type": "url",
+        "multilanguage": true
+      },
 
-          "ButtonText": {
-            "type": "text"
-          },
-		  "Url": {
-            "type": "mlurl"
-          },
-
-    "SortIndex": {
-      "hidden": true
-    }
-  }
+      "SortIndex": {
+        "hidden": true
+      }
+   }
 }

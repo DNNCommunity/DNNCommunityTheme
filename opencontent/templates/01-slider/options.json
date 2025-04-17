@@ -1,54 +1,72 @@
 {
-    "fields": {
-        "Slides": {
+  "fields": {
+    "ModuleTitle": {
+      "dependencies": {},
+      "type": "text"
+    },
+    "Slides": {
+      "items": {
+        "fields": {
+          "Title": {
+            "multilanguage": true,
+            "dependencies": {},
+            "type": "text"
+          },
+          "Description": {
+            "multilanguage": true,
+            "dependencies": {},
+            "type": "ckeditor"
+          },
+          "TextPositionH": {
+            "dependencies": {},
+            "type": "select",
+            "optionLabels": [
+              "left",
+              "center",
+              "right"
+            ]
+          },
+          "TextPositionV": {
+            "dependencies": {},
+            "type": "select",
+            "optionLabels": [
+              "top",
+              "middle",
+              "bottom"
+            ]
+          },
+          "Image": {
+            "dependencies": {},
+            "type": "imagebrowser",
+            "uploadfolder": "Images/OpenContent/Links-Block/original",
+            "cropfolder": "Images/OpenContent/Links-Block/thumbs50/",
+            "showOverwrite": true,
+            "overwrite": true,
+            "showCropper": true,
+            "width": 2500,
+            "height": 1200,
+            "fileMaxSize": 6000000
+          },
+          "Link": {
             "fields": {
-                "item": {
-                    "fields": {
-						"Title": {
-						   
-							"type": "mltext"
-						},
-                        "Description": {
-                            "type": "mlckeditor"
-                        },
-                        "Image": {
-							"label": "Slide Image",
-							"type": "imagex",            
-							"uploadhidden": false,
-							"uploadfolder": "Images/OpenContent/Links-Block/original",
-							"fileExtensions": "gif|jpg|jpeg|png|JPG|JPEG|PNG",
-							"fileMaxSize": 6000000,
-							"showOverwrite": true,
-							"overwrite": true,
-							"showCropper": true,
-							"cropfolder": "Images/OpenContent/Links-Block/thumbs50/",
-							"saveCropFile": true,
-							"width": 2500,
-							"height": 1200
-                        },
-						"Link":{
-							"fields": {
-								"Url": {
-									"type": "url"
-									},
-								 "Text": {
-									"helper": "If a text is entered a button will show, if not whole textblock will be a link"
-								}
-							}
-						},
-						"TextPositionH":{
-							"type": "select",
-							 "optionLabels": ["left", "center", "right"],
-							"removeDefaultNone": false
-						},
-						"TextPositionV":{
-							"type": "select",
-							 "optionLabels": ["top", "middle", "bottom"],
-							"removeDefaultNone": false
-						}
-                    }
-                }
+              "Url": {
+                "multilanguage": true,
+                "dependencies": {},
+                "type": "url"
+              },
+              "Text": {
+                "multilanguage": true,
+                "dependencies": {},
+                "helper": "If a text is entered a button will show, if not whole textblock will be a link",
+                "type": "text"
+              }
             }
+          },
+          "Enabled": {
+            "dependencies": {}
+          }
         }
+      }
     }
+  }
 }
