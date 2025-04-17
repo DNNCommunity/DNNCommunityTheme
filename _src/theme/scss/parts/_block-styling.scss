@@ -59,7 +59,7 @@
 
     &-grey{
 
-        background: lighten($gray-100, 3%);
+        background: $gray-100;
 
         .dnnModuleManager{
             border-color: $gray-600;
