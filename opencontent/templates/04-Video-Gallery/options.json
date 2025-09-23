@@ -1,7 +1,7 @@
 {
   "fields": {
     "Videos": {
-      "type": "accordion",
+      "type": "array",
       "helper": "If you add a series of Videos, also enter \"Series\" below",
       "items": {
         "fields": {
@@ -16,7 +16,7 @@
             "configset": "basic"
           },
           "Icon": {
-            "type": "imagex",
+            "type": "imagebrowser",
             "uploadhidden": false,
             "uploadfolder": "OpenContent/Images/YouTube",
             "fileExtensions": "gif|jpg|jpeg|tiff|png",
@@ -43,7 +43,7 @@
           "configset": "basic"
         },
         "Icon": {
-          "type": "imagex",
+          "type": "imagebrowser",
           "uploadhidden": false,
           "uploadfolder": "Images/OpenContent/Videos/Full",
           "fileExtensions": "gif|jpg|jpeg|tiff|png",
@@ -59,7 +59,7 @@
       }
     },
     "Categories": {
-      "type": "select2",
+      "type": "relation",
       "dataService": {
         "action": "LookupData",
         "data": {

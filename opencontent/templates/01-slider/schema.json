@@ -1,61 +1,67 @@
 {
-    "type": "object",
-    "properties": {
-        "ModuleTitle": {
-            "title": "Module Title",
+  "type": "object",
+  "properties": {
+    "ModuleTitle": {
+      "title": "Module Title",
+      "type": "string"
+    },
+    "Slides": {
+      "type": "array",
+      "items": {
+        "title": "",
+        "type": "object",
+        "properties": {
+          "Title": {
+            "title": "Title",
             "type": "string"
-        },
-        "Slides": {
-            "type": "array",
-            "items": {
-                "title": "Slide",
-                "type": "object",
-                "properties": {
-                    "Title": {
-                        "title": "Title",
-                        "type": "string"
-                    },
-                    "Description": {
-                        "title": "Description",
-                        "type": "string"
-                    },
-					"TextPositionH":{
-						"title": "Horizontal Text Position",
-						"type":"string", 
-						"enum": ["left", "center", "right"]
-					},
-					"TextPositionV":{
-						"title": "Vertical Text Position",
-						"type":"string", 
-						"enum": ["top", "middle", "bottom"]
-					},
-                    "Image": {
-                        "title": "Image 50%",
-                        "type": "string"
-                    }, 
-					"Link": {
-                        "title": "Link",
-                        "type": "object",
-						"properties": {
-							 "Url": {
-								"title": "Url",
-								"type": "string"
-							},
-							 "Text": {
-								"title": "Text",
-								"type": "string"
-							}
-						}
-                    },
-					"Enabled": {
-                        "title": "Enable slide?",
-                        "type": "boolean",
-						"default" : true
-                    }
-				
-					
-                }
+          },
+          "Description": {
+            "title": "Description",
+            "type": "string"
+          },
+          "TextPositionH": {
+            "title": "Horizontal Text Position",
+            "type": "string",
+            "enum": [
+              "left",
+              "center",
+              "right"
+            ]
+          },
+          "TextPositionV": {
+            "title": "Vertical Text Position",
+            "type": "string",
+            "enum": [
+              "top",
+              "middle",
+              "bottom"
+            ]
+          },
+          "Image": {
+            "title": "Image 50%",
+            "type": "string"
+          },
+          "Link": {
+            "title": "Link",
+            "type": "object",
+            "properties": {
+              "Url": {
+                "title": "Url",
+                "type": "string"
+              },
+              "Text": {
+                "title": "Text",
+                "type": "string"
+              }
             }
+          },
+          "Enabled": {
+            "title": "Enable slide?",
+            "default": true,
+            "type": "boolean"
+          }
         }
+      }
     }
+  }
 }
