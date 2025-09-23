@@ -1,0 +1,107 @@
+@import "_mixins.less";
+
+.oc-timeline{
+
+	@medium-break: 768px;
+	@large-break: 992px;
+	
+	@tl-main-line-color: @GreyLight;
+	@tl-main-line-width: 4px;
+	
+	@tl-marker-width: 75px;
+	@tl-marker-width-md: 125px;
+	@tl-marker-width-lg: 200px;
+	@tl-marker-border-width: 3px;
+	@tl-marker-border-width-md: 5px;
+	@tl-marker-border-width-lg: 7px;
+	@tl-marker-border-color: @Col1DesatExtraLight;
+
+	.timeline, .item{
+		list-style-type:none;
+		padding:0;
+		margin:0;
+	}
+	
+	
+	
+	.item{
+		position:relative;
+		padding:3em 0;
+		
+		.timeline-heading{
+			.title{
+			
+				font-size: 1.4em;
+				margin:0;
+				font-weight:bold;
+			
+			}
+			
+			.sub-title{
+				font-size: 1em;
+				margin:0;
+			}
+			
+			:last-child{
+				margin-bottom:1em;
+			}
+		}
+		
+				
+		
+		.timeline-image{
+			
+			width: @tl-marker-width;
+			float:left;
+			
+			.img-circle{
+				border-radius:50%;
+				border:solid @tl-marker-border-color @tl-marker-border-width;
+			}
+		}
+		
+		.timeline-panel{
+			float:left;
+			max-width: ~"calc(95% - @{tl-marker-width})";
+			padding: 0  0 0 5%;
+			
+		}
+		
+		.line{
+			position:absolute;
+			left: (@tl-marker-width / 2);
+			top: @tl-marker-width;
+			height:100%;
+			
+			background:@tl-main-line-color;
+			width:@tl-main-line-width;
+			z-index:-1;
+			
+			@media screen and (min-width: @medium-break){
+				right:50%;
+				left:auto;
+			}
+		}
+		
+		&:last-child{
+			.line{
+				display:none;
+			}
+		}
+		
+		// Get CSS for centering
+	#time-line-center(@medium-break, @tl-marker-width-md, @tl-marker-border-color, @tl-marker-border-width-md, @tl-main-line-width);
+	#time-line-center(@large-break, @tl-marker-width-lg, @tl-marker-border-color, @tl-marker-border-width-lg, @tl-main-line-width);
+
+		
+			footer{
+				padding-top: 1em;
+				.fa{
+					margin-right: 0.5em;
+					margin-left: -0.2em;
+				}
+			}
+
+	}
+}
+
