@@ -1,0 +1,22 @@
+{
+	
+    "builderVersion": 2,
+    "editWitoutPostback": true,
+    "index": true,
+	"detailMetaTitle": "{{Title}}",
+    "detailMetaDescription": "{{Intro}}",
+    "detailUrl": "{{Title}}",
+	
+    "templates": {
+	    "template": {
+            "type": "multiple",
+            "title": "template",            
+            "main": {
+                "template": "template.hbs",
+				"clientSideData": false,
+				"dnnsearch": false
+            }
+        }
+    }
+
+}

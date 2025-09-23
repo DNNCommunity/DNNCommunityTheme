@@ -1,0 +1,77 @@
+{
+  "type": "object",
+  "properties": {
+    "Texts": {
+      "title": "Texts",
+      "type": "object",
+      "properties": {
+        "Title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "Intro": {
+          "title": "Intro",
+          "type": "string"
+        },
+        "Text": {
+          "title": "Text",
+          "type": "string"
+        }
+      }
+    },
+    "Visuals": {
+      "title": "Image",
+      "type": "object",
+      "properties": {
+        "Image": {
+          "title": "Image",
+          "type": "string"
+        },
+        "Text": {
+          "title": "Alt Text (SEO)",
+          "type": "string"
+        }
+      }
+    },
+    "Links": {
+      "title": "Buttons",
+      "type": "array",
+      "items": {
+        "title": "",
+        "type": "object",
+        "properties": {
+          "Text": {
+            "title": "Text",
+            "type": "string"
+          },
+          "Icon": {
+            "title": "Icon Code",
+            "type": "string"
+          },
+          "Url": {
+            "title": "Url",
+            "type": "string"
+          },
+          "NewWindow": {
+            "title": "Open in New Window",
+            "type": "boolean"
+          },
+          "Color": {
+            "title": "Colour",
+            "type": "string",
+            "enum": [
+              "primary",
+              "secondary",
+              "default"
+            ]
+          }
+        }
+      }
+    },
+    "SortIndex": {
+      "title": "Sorting Order",
+      "default": 999999,
+      "type": "number"
+    }
+  }
+}

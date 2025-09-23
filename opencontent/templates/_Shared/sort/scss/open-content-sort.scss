@@ -1,0 +1,76 @@
+.oc-item-editbar {
+	display: flex;
+	background: rgba($gray-300, 0.3);
+	border: solid 1px rgba($white, 0.5);
+	padding: 0.5em 0.3em;
+	height: 1.5em;
+	margin-top: 0.5em;
+	align-items: center;
+	justify-content: flex-end;
+
+	.oc-edit-block-nr{
+		flex-grow: 1;
+		padding-left: 0.5em;
+
+		&:before{
+			content: "index-";
+		}
+	}
+	.oc-item-edit-link {
+		color: #000;
+		width: calc(1.5em - 1px);
+		height: calc(1.5em - 1px);
+		text-align: center;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: 2px;
+
+		&:hover {
+			background: $gray-400;
+		}
+
+		img {
+			border: none;
+		}
+
+	}
+
+	.oc-item-move{
+		cursor: move;
+	}
+	
+
+}
+
+
+
+
+
+// Class injected when user ir reordering
+.oc-ordering-elements {
+
+	// Hide Persona Bar wehn reordering (so you can drag to the bottom)
+	.editBarFrameContainer.personabar-shown {
+		display: none !important;
+	}
+
+
+	// Hide drag and edit elements whhile Drag status is being saved
+
+	.oc-item-editbar {
+		.oc-item-edit-link {
+			// Hide the edit icon when dragging as saving can taka while whne there are a lot of items
+			i{
+				display: none;
+			}
+			
+			&:after {
+				content: "\f017";
+				font-family: FontAwesome;
+				display: inline-block;
+				margin-right: 0.2em;
+			}
+		}
+	}
+}
