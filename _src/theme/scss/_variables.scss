@@ -27,8 +27,8 @@ $col1-400: hsl($col1-hue, $col-sat, 60%);
 $col1-500: hsl($col1-hue, $col-sat, 50%);
 $col1-600: hsl($col1-hue, $col-sat, 40%);
 $col1-700: hsl($col1-hue, $col-sat, 30%);
-$col1-800: hsl($col1-hue, $col-sat, 20%);
-$col1-900: hsl($col1-hue, $col-sat, 10%);
+$col1-800: hsl($col1-hue, $col-sat, 15%);
+$col1-900: hsl($col1-hue, $col-sat, 5%);
 
 $red: $dnn-red !default;
 
@@ -37,7 +37,7 @@ $secondary: $col1-700;
 
 // BS5 Gray
 $white:    #fff;
-$gray-100: #e1edf2;
+$gray-100: #f2f6f7;
 $gray-200: #d5e1e5;
 $gray-300: #bec8cc;
 $gray-400: #a6afb3;
@@ -47,6 +47,8 @@ $gray-700: #474b4d;
 $gray-800: #2f3233;
 $gray-900: #18191a;
 $black:    #000;
+
+$light: #f2f6f7;
 
 // Font-sizes
 $font-sm: 0.9em;

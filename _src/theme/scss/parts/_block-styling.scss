@@ -57,9 +57,9 @@
         }
     }
 
-    &-grey{
+    &-grey{ // For consistency gray would be better, but it's also in the Pane id's...
 
-        background: lighten($gray-100, 3%);
+        background: $gray-100;
 
         .dnnModuleManager{
             border-color: $gray-600;
@@ -69,9 +69,9 @@
 
 }
 
-$skew-dist-y: 70px;
-$skew-dist-y-extra: 2px;
-$skew-dist-correction: 30px; // As the skew creates quite a large space at the top you can eliminate a part of this using this value.
+$skew-dist-y: 5vw;
+$skew-dist-y-extra: 0.1vw;
+$skew-dist-correction: 2vw; // As the skew creates quite a large space at the top you can eliminate a part of this using this value.
 
 
 .skew {
@@ -88,7 +88,7 @@ $skew-dist-correction: 30px; // As the skew creates quite a large space at the t
 
 .skew-top {
 
-    margin-top: $skew-dist-y;
+    margin: 0;
 
     &:before {
         content: '';
@@ -105,7 +105,7 @@ $skew-dist-correction: 30px; // As the skew creates quite a large space at the t
 
 .skew-bottom {
 
-    margin-bottom: $skew-dist-y;
+    margin: 0;
 
     &:after {
         content: '';
