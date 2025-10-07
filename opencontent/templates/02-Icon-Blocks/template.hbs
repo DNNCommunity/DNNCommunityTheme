@@ -7,17 +7,19 @@
 	<div class="container">
 		<div class="row">
 		<div class="col-12">
-			<div class="row sortableList justify-content-center" data-moduleid="{{Context.ModuleId}}">
+			<div class="row gx-5 sortableList justify-content-center" data-moduleid="{{Context.ModuleId}}">
 			{{#each Items}}
-				<div class="item col-12 col-lg-4" data-id="{{Context.Id}}">
-					<div class="item-content item-content-{{@index}}">
-					
+				<div class="item col-12 col-xs-{{@root.Settings.Style.Item.sm}} col-md-{{@root.Settings.Style.Item.md}} col-xl-{{@root.Settings.Style.Item.lg}}" data-id="{{Context.Id}}">
+
 					{{#if Context.IsEditable}}
-					<div class="sorthandle text-right">
+					<div class="oc-item-editbar sorthandle text-right">
 						<a class="edit-link" href="{{Context.EditUrl}}"><i class="fa fa-pencil edit-link" aria-hidden="true"></i></a>
 						<span class="fa fa-arrows edit-link" aria-hidden="true" style="cursor: move;cursor: -webkit-grabbing;"></span>
 					</div>
 					{{/if}}
+					<div class="item-content item-content-{{@index}}">
+					
+					
 					<a class="text-link" href="{{Url}}" target="{{Target}}">
 					<div class="content">
 							{{#if Visuals.Icon}}
@@ -26,14 +28,12 @@
 								</div>
 							{{/if}}
 							
-							
-							
 							{{#if Texts.Title}}
 							<h2 class="title text-center">{{Texts.Title}}</h2>
 							{{/if}}
 							
 								{{#if Texts.Text}}
-									<div class="text">
+									<div class="text d-none d-lg-block">
 									{{Texts.Text}}
 									</div>
 								{{/if}}
