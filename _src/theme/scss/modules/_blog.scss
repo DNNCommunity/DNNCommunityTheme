@@ -69,6 +69,25 @@
     }
 }
 
+.bbs-listarticle{
+
+    margin: 1.5em 0;
+    .bbs-list-title{
+        margin: 0;
+    }
+
+    .bbs-list-categories{
+        margin: 0.4em 0 1.5em;
+        font-weight: bold;
+        color: $blue-600;
+        text-transform: uppercase;
+    }
+
+    .dnnc-blog-img{
+        border: solid 1px $gray-200;
+    }
+}
+
     // Make sure blog details  are full width (see https://github.com/DNNCommunity/DNNCommunityTheme/issues/141)
     // Depends on the class injected by Style Helper
 
