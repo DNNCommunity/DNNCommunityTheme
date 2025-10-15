@@ -105,7 +105,7 @@ $skew-dist-correction: 2vw; // As the skew creates quite a large space at the to
 
 .skew-bottom {
 
-    margin: 0;
+    margin: 0 0 $skew-dist-correction;
 
     &:after {
         content: '';
