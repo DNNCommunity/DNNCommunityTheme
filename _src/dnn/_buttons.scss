@@ -1,3 +1,5 @@
+// This will use the bootstrap button style defintions for the DNN buttons
+
 .dnnPrimaryAction, .dnnFormItem input[type="submit"], a.dnnPrimaryAction,
 .dnnFormItem button, .dnnFormItem input[type="button"],
 .dnnFormItem input[type="reset"],
@@ -40,4 +42,12 @@ input[type='submit']
         border-color: var(--bs-btn-hover-border-color);
     }
 
+}
+
+// Overrule weird line in default.css specific for tertiary actions
+.dnnTertiaryAction,
+a.dnnTertiaryAction{
+    
+    padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+   
 }

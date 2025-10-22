@@ -1,26 +1,61 @@
-$btn-primary-color: $white;
-// Buttons
-.btn-primary{
+// ==============================
+// Button Variable Definitions for Bootstrap
+// ==============================
 
-    --bs-btn-color: #{$btn-primary-color}; // overrrule text color to white
-    --bs-btn-bg: #{$red};
-    --bs-btn-border-color: #{$red};
-    border-width: 0;
+// Text colors
+$btn-primary-color: $white !default;
+$btn-secondary-color: $white !default;
+$btn-tertiary-color: $black !default;
+
+$btn-primary-visited-color: $btn-primary-color !default; 
+$btn-secondary-visited-color: $btn-secondary-color !default; 
+$btn-tertiary-visited-color: $btn-tertiary-color !default; 
+
+// Background colors
+$btn-bg-color-primary: $red !default;
+$btn-bg-color-secondary: $col1 !default;   // Replace with actual secondary color
+$btn-bg-color-tertiary: $gray-300 !default;    // Replace with actual tertiary color
+
+// Border colors (match background by default)
+$btn-border-color-primary: $btn-bg-color-primary !default;
+$btn-border-color-secondary: $btn-bg-color-secondary !default;
+$btn-border-color-tertiary: $btn-bg-color-tertiary !default;
 
 
-    &:visited{ // Due to DNN default.css def for :visited
-        color: $btn-primary-color;
-    }
+// ==============================
+// Button Styles
+// ==============================
+
+.btn-primary {
+  --bs-btn-color: #{$btn-primary-color};
+  --bs-btn-bg: #{$btn-bg-color-primary};
+  --bs-btn-border-color: #{$btn-border-color-primary};
+  border-width: 0;
+
+  &:visited { // Fix for DNN default.css :visited override
+    color: $btn-primary-visited-color;
+  }
 }
 
+.btn-secondary {
+  --bs-btn-color: #{$btn-secondary-color};
+  --bs-btn-bg: #{$btn-bg-color-secondary};
+  --bs-btn-border-color: #{$btn-border-color-secondary};
+    border-width: 0;
 
-.btn-secondary{
+  &:visited {
+    color: $btn-secondary-visited-color;
+  }
+}
 
-    --bs-btn-color: #{$btn-primary-color}; // overrrule text color to white
-    --bs-btn-bg: #{$col1};
-    --bs-btn-border-color: #{$col1};
+.btn-default {
+  --bs-btn-color: #{$btn-tertiary-color};
+  --bs-btn-bg: #{$btn-bg-color-tertiary};
+  --bs-btn-border-color: #{$btn-border-color-tertiary};
+    border-width: 0;
 
-    &:visited{ // Due to DNN default.css def for :visited
-        color: $btn-primary-color;
-    }
+  &:visited {
+    color: $btn-tertiary-visited-color;
+  }
+
 }
