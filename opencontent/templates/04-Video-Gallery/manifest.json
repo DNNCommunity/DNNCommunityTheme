@@ -1,6 +1,7 @@
 {
     "editWitoutPostback": true,
     "index": true,
+	"builderVersion": 2,
 	
 	"detailMetaTitle": "{{Title}}",
     "detailMetaDescription": "{{Intro}}",
