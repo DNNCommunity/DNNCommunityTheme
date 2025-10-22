@@ -95,7 +95,7 @@
                     </div>
                 </footer>
             </div>
- 
+        </div>
         <!-- Bootstrap core JS-->
         <dnn:DnnJsInclude runat="server" ForceProvider="DnnFormBottomProvider" FilePath="vendors/bootstrap/js/bootstrap.bundle.min.js" PathNameAlias="SkinPath" />
 

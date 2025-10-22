@@ -1,0 +1,6 @@
+// The lack of a z-index for modules, can lead to the z-index inside modules to leak up into the DOM.
+// https://github.com/DNNCommunity/DNNCommunityTheme/issues/160
+// 
+.DnnModule {
+    z-index: 902;
+}
