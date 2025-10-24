@@ -79,10 +79,7 @@ $skew-dist-correction: 2vw; // As the skew creates quite a large space at the to
     &-top,
     &-bottom {
         position: relative;
-        > .container{
-            margin-top: -$skew-dist-correction;
-            margin-bottom: -$skew-dist-correction;
-        }
+       
     }
 }
 
@@ -101,6 +98,11 @@ $skew-dist-correction: 2vw; // As the skew creates quite a large space at the to
         top: -$skew-dist-y;
         clip-path: polygon(0 100%, 0 $skew-dist-y - $skew-dist-y-extra, 100% 0, 100% 100%);
     }
+
+     > .container{
+            margin-top: -$skew-dist-correction;
+            
+        }
 }
 
 .skew-bottom {
@@ -118,6 +120,11 @@ $skew-dist-correction: 2vw; // As the skew creates quite a large space at the to
         bottom: -$skew-dist-y ;
         clip-path: polygon(0 0, 100% 0, 100% $skew-dist-y-extra, 0 100%);
     }
+
+     > .container{
+           
+            margin-bottom: -$skew-dist-correction;
+        }
 }
 
 
