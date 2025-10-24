@@ -1,0 +1,11 @@
+// Feel like a hack but the CSS for the CC banner is very specific..
+
+#Body {
+
+    .cc-window {
+        .cc-btn {
+            @extend .dnnSecondaryAction;
+            
+        }
+    }
+}
