@@ -178,7 +178,7 @@
 }
 
 .ModBlogC .bbs-pager .bbs-pagination li {
-    display: none;
+   display: inline-block;
     margin: 0 .2em
 }
 
@@ -192,7 +192,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    padding: .6em .8em;
+    padding: .2em .6em;
     font-size: 1.1em
 }
 
@@ -231,22 +231,18 @@
 }
 
 .ModBlogC .bbs-pager .bbs-pagination .current {
-    background-color: #777;
-    border-color: #777;
+    background-color: #1ea3dc;
+    border-color: #1ea3dc;
     color: #fff;
     pointer-events: none
 }
 
-@media only screen and (min-width:768px) {
-    .ModBlogC .bbs-pager .bbs-pagination li {
-        display: inline-block
-    }
-}
 
 @media only screen and (min-width:1170px) {
     .ModBlogC .bbs-pager .bbs-pagination {
         margin: 4em auto 8em
     }
+
 }
 
 .ModBlogC .supertitle {
