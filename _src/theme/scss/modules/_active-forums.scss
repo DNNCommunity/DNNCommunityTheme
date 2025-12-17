@@ -10,10 +10,13 @@
             font-weight: normal;
             color: $col1-900;
             text-transform: uppercase;
+            word-break: break-all;
         }
-        h3{
-            font-size: 1.3em;
+        .forum-latest-link{
+            font-size: 1.2em;
             margin: 0.5em 0;
+            word-break: break-all;
+
         }
         
         min-height: 100%;
