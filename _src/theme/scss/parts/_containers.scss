@@ -5,4 +5,10 @@
    .pane-top &{
       padding: 0;
    }
+
+
+}
+// Remove margin top for container headers
+.cont-header-title{
+   margin-top: 0;
 }
