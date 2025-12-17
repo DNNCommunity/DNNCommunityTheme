@@ -10,13 +10,17 @@
             font-weight: normal;
             color: $col1-900;
             text-transform: uppercase;
-            word-break: break-all;
+            word-break: break-word;
         }
-        .forum-latest-link{
+        .forum-latest-title{
             font-size: 1.2em;
             margin: 0.5em 0;
-            word-break: break-all;
+            word-break: break-word;
 
+        }
+
+        .forum-latest-text{
+            color: $gray-900;
         }
         
         min-height: 100%;
