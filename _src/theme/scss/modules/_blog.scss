@@ -99,8 +99,19 @@
     .blogs-detail {
         .panes {
             .main-blog-module{
-              
-                    width: 100% !important;
+                width: 100% !important;
            }
+
         }
     }
+
+    .dnnc-blog-metadata{
+
+        h5{
+            margin-bottom: 0.3em;
+        }
+           .social-icon{
+            margin-right: 0.8em;
+            width: 1.2em;
+           }
+        }
