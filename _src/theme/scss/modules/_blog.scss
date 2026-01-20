@@ -99,8 +99,12 @@
     .blogs-detail {
         .panes {
             .main-blog-module{
-              
-                    width: 100% !important;
+                width: 100% !important;
+           }
+
+           .social-icon{
+            margin-right: 0.8em;
+            width: 1.2em;
            }
         }
     }

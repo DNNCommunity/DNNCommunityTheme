@@ -18,25 +18,16 @@ const skinScssPath = ['./_src/skin.scss'];
 const scssWatchPath = ['./_src/**/*.scss','./opencontent/templates/**/*.scss'];
 
 function buildScss() { // Parse only the Skin.scss file
-  // 1. What SCSS  files to parse?
   return gulp.src(skinScssPath)
-  
- 
-   // 2. Parse SCSS 
-   .pipe(sass.sync().on('error', sass.logError))  
-   
-   // 3. Write File
-   //.pipe(gulp.dest('../skin.css'))
-   
-   // 4. Compress CSS
-   .pipe(cleanCSS({inline: ['none']}))
-   
-   // 5. Rename to min
-   //.pipe(rename({ extname: '.min.css' }))
-   
-   // 6. Write minified CSS
-   .pipe(gulp.dest('./'))
-   
+
+    // 2. Parse SCSS (silence dependency warnings, keep errors)
+    .pipe(sass.sync({ quietDeps: true }).on('error', sass.logError))
+    
+    // 4. Compress CSS
+    .pipe(cleanCSS({ inline: ['none'] }))
+    
+    // 6. Write minified CSS
+    .pipe(gulp.dest('./'));
 }
 
 // Containers ----------------------
@@ -99,6 +90,12 @@ function getVendors(cb){
   
     gulp.src(bootsJS)
     .pipe(gulp.dest(bootsJSDest));
+
+    const bootsIcons = ['node_modules/bootstrap-icons/icons/*.*'];
+    const bootsIconsDest = ['assets/icons'];
+
+    gulp.src(bootsIcons)
+    .pipe(gulp.dest(bootsIconsDest));
 
   cb();
 
