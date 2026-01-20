@@ -30,7 +30,15 @@
         <div class="row">
           <div class="col-md-12">
             <h5>[resx:Share]</h5>
-            <div id="sharrre" data-url="[post:link]" data-text="share"></div>
+		        <div class="blog-share">
+              <!-- Paths hard coded because module has no [TOKEN] for Skin Path -->
+              <a class="button_bluesky" href="https://bsky.app/intent/compose?text=[post:localizedtitle]: [post:link]" target="_blank" rel="nofollow" title="Share on BlueSky"><img class="social-icon icon-bluesky" src="/Portals/_default/Skins/DNN-Community-2024/assets/icons/bs/bluesky.svg" alt="BlueSky Logo"><span class="d-none">Share to BlueSky</span></a>
+              <a class="button_facebook" href="https://www.facebook.com/sharer/sharer.php?u=[post:link]" target="_blank" rel="nofollow" title="Share on Facebook"><img class="social-icon icon-bluesky" src="/Portals/_default/Skins/DNN-Community-2024/assets/icons/bs/facebook.svg" alt="Facebook Logo"><span class="d-none">Share to Facebook</span></a>
+              <a class="button_linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=[post:link]" target="_blank" rel="nofollow" title="Share on  LinkedIn"><img class="social-icon icon-bluesky" src="/Portals/_default/Skins/DNN-Community-2024/assets/icons/bs/linkedin.svg" alt="LinkedIn Logo"><span class="d-none">Share to LinkedIn</span></a>
+              <a class="button_twitter" href="https://mastodonshare.com/?text=[post:localizedtitle]]&url=[post:link]" title="Share to Mastodon"><img class="social-icon icon-bluesky" src="/Portals/_default/Skins/DNN-Community-2024/assets/icons/bs/mastodon.svg" alt="Mastodon Logo"><span class="d-none">Share to Mastodon</span></a>
+              <a class="button_twitter" href="https://twitter.com/share?text=[post:localizedtitle]&url=[post:link]" title="Share on X"><img class="social-icon icon-bluesky" src="/Portals/_default/Skins/DNN-Community-2024/assets/icons/bs/twitter-x.svg" alt="X Logo"><span class="d-none">Share to X</span></a>
+              <a class="button_email" href="mailto:enter-email-adress?subject=[post:localizedtitle]&body=[post:link]" target="_blank" rel="nofollow" title="Share via Email"><img class="social-icon icon-bluesky" src="/Portals/_default/Skins/DNN-Community-2024/assets/icons/bs/envelope.svg" alt="Enveloppe"><span class="d-none">Share via Email</span></a>
+            </div>
           </div>
         </div>
         <div class="row">
@@ -38,8 +46,7 @@
             <h5>[resx:WrittenBy]</h5>
             <div class="row">
               <div class="col-md-12">
-                <img src="/dnnimagehandler.ashx?mode=profilepic&amp;userid=[Author:UserId]&amp;w=120"
-                  class="img-fluid rounded-circle" />
+                <img src="/dnnimagehandler.ashx?mode=profilepic&amp;userid=[Author:UserId]&amp;w=120" class="img-fluid rounded-circle">
               </div>
             </div>
             <div class="row">
