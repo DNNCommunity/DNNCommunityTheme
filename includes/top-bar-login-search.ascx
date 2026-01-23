@@ -7,7 +7,7 @@
 			<dnn:LOGIN ID="dnnLogin" CssClass="login-link" runat="server" LegacyMode="false" />
 		</div>
 		<div class="search-wrap">
-			<dnn:SEARCH ID="dnnSearch" runat="server" ShowSite="false" ShowWeb="false" EnableTheming="true" Submit='<i class="fa fa-search"></i>' CssClass="SearchButton" />
+			<dnn:SEARCH ID="dnnSearch" runat="server" ShowSite="false" ShowWeb="false" Submit='<i class="fa fa-search"></i>' CssClass="SearchButton" />
 
 		</div>
 	</div>
