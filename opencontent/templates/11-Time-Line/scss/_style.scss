@@ -40,13 +40,14 @@ $tl-marker-text-color-alt: $white;
   .tl-item {
     position: relative;
 
-    .oc-item-status{
+    .oc-item-status {
       margin-right: 1em;
     }
 
-    &-disabled{
+    &-disabled {
       opacity: 0.5;
-      &:hover{
+
+      &:hover {
         opacity: 1;
       }
     }
@@ -96,7 +97,7 @@ $tl-marker-text-color-alt: $white;
       }
     }
 
-    &:hover{
+    &:hover {
       border-color: $tl-marker-border-hover-color;
     }
 
@@ -104,7 +105,7 @@ $tl-marker-text-color-alt: $white;
 
       .timeline-marker {
         // For text inside the circle
-              border-color: $tl-marker-border-color-alt;
+        border-color: $tl-marker-border-color-alt;
         background: $tl-marker-bg-color-alt;
         color: $tl-marker-text-color-alt;
       }
@@ -147,11 +148,17 @@ $tl-marker-text-color-alt: $white;
     }
 
     @include time-line-center(0, $tl-item-padding, $tl-marker-width, $tl-marker-border-width, $tl-main-line-width);
-    @include time-line-center($breakpoint-md, $tl-item-padding-md, $tl-marker-width-md,$tl-marker-border-width-md, $tl-main-line-width);
+    @include time-line-center($breakpoint-md, $tl-item-padding-md, $tl-marker-width-md, $tl-marker-border-width-md, $tl-main-line-width);
     @include time-line-center($breakpoint-lg, $tl-item-padding-lg, $tl-marker-width-lg, $tl-marker-border-width-lg, $tl-main-line-width);
 
-    footer {
+    .tl-item-buttons {
       padding-top: 1em;
+
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3em;
+
 
       .fa {
         margin-right: 0.5em;

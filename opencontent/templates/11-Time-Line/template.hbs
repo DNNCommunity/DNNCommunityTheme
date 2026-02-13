@@ -43,8 +43,8 @@
 				</section>
 				{{/if}}
 			{{#if Links}}
-			<footer>
-			{{#each  Links.[0]}}
+			<footer class="tl-item-buttons">
+			{{#each  Links}}
 				<a class="btn {{#if Color}}btn-{{Color}}{{else}}btn-default{{/if}}" href="{{Url}}"{{#if NewWindow}} target="_blank" rel="noopener noreferrer"{{/if}}>{{#if Icon}}<i class="fa {{Icon}}" aria-hidden="true"></i>{{/if}}{{Text}}</a>
 			{{/each}}
 			</footer>
