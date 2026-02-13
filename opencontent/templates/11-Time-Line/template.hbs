@@ -7,9 +7,11 @@
 
  <ul class="timeline sortableList" data-moduleid="{{Context.ModuleId}}">
  {{#each Items}}
-        <li class="item" data-id="{{Context.Id}}">
+	{{#ifor Enabled Context.IsEditable}}
+        <li class="tl-item tl-item{{#if Enabled}}-enabled{{else}}-disabled{{/if}}" data-id="{{Context.Id}}">
 		{{#if Context.IsEditable}}
 		<div class="oc-item-editbar sorthandle text-right mb-3">
+			<span  class="oc-item-status">{{#if Enabled}}enabled{{else}}disabled{{/if}}</span>
 			<a class="oc-edit-link" href="{{Context.EditUrl}}"><i class="fa fa-pencil edit-link" aria-hidden="true"></i></a>
 			<span class="fa fa-arrows edit-link oc-item-move" aria-hidden="true" style="cursor: move;cursor: -webkit-grabbing;"></span>
 		</div>
@@ -51,6 +53,7 @@
 		  </div>
           <div class="line"></div>
         </li>
+		{{/ifor}}
 		{{/each}}
 	</ul>
 

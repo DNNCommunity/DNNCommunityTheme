@@ -23,23 +23,33 @@ $tl-marker-border-hover-color: $col1-600;
 $tl-marker-bg-color: $col1-700;
 $tl-marker-text-color: $white;
 
-$tl-marker-border-color-alt: color.scale($col1-700, $saturation: -33%, $lightness: -10%);
-$tl-marker-border-hover-color-alt: $col1-600;
-$tl-marker-bg-color-alt: $col1-700;
+$tl-marker-border-color-alt: color.scale($col1-700, $lightness: -10%);
+$tl-marker-bg-color-alt: $col1-600;
 $tl-marker-text-color-alt: $white;
 
 
 .oc-timeline {
 
   .timeline,
-  .item {
+  .tl-item {
     list-style-type: none;
     padding: 0;
     margin: 0;
   }
 
-  .item {
+  .tl-item {
     position: relative;
+
+    .oc-item-status{
+      margin-right: 1em;
+    }
+
+    &-disabled{
+      opacity: 0.5;
+      &:hover{
+        opacity: 1;
+      }
+    }
 
     .timeline-heading {
       .oc-title {
@@ -86,6 +96,10 @@ $tl-marker-text-color-alt: $white;
       }
     }
 
+    &:hover{
+      border-color: $tl-marker-border-hover-color;
+    }
+
     &:nth-child(even) {
 
       .timeline-marker {
@@ -98,14 +112,6 @@ $tl-marker-text-color-alt: $white;
     }
 
 
-    &:hover {
-      .timeline-marker {
-        .timeline-marker-img {
-          border-color: $tl-marker-border-hover-color;
-        }
-      }
-
-    }
 
     .timeline-panel {
       float: left;
@@ -140,9 +146,9 @@ $tl-marker-text-color-alt: $white;
       }
     }
 
-    @include time-line-center(0, $tl-item-padding, $tl-marker-width, $tl-marker-border-color, $tl-marker-border-hover-color, $tl-marker-border-width, $tl-main-line-width);
-    @include time-line-center($breakpoint-md, $tl-item-padding-md, $tl-marker-width-md, $tl-marker-border-color, $tl-marker-border-hover-color, $tl-marker-border-width-md, $tl-main-line-width);
-    @include time-line-center($breakpoint-lg, $tl-item-padding-lg, $tl-marker-width-lg, $tl-marker-border-color, $tl-marker-border-hover-color, $tl-marker-border-width-lg, $tl-main-line-width);
+    @include time-line-center(0, $tl-item-padding, $tl-marker-width, $tl-marker-border-width, $tl-main-line-width);
+    @include time-line-center($breakpoint-md, $tl-item-padding-md, $tl-marker-width-md,$tl-marker-border-width-md, $tl-main-line-width);
+    @include time-line-center($breakpoint-lg, $tl-item-padding-lg, $tl-marker-width-lg, $tl-marker-border-width-lg, $tl-main-line-width);
 
     footer {
       padding-top: 1em;

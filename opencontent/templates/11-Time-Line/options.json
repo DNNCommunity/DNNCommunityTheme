@@ -73,6 +73,10 @@
         }
       }
     },
+    "Enabled": {
+      "dependencies": {},
+      "helper": "If unchcked, item will not be visible to Visitors"
+    },
     "SortIndex": {
       "hidden": true,
       "dependencies": {}

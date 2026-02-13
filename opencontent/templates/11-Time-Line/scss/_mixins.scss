@@ -30,7 +30,7 @@
     justify-content: center;
 
           .timeline-marker-text{
-             font-size: $marker-width / 8;
+             font-size: $marker-width / 9;
           }
 }
 
@@ -77,7 +77,7 @@
     }
 }
 
-@mixin time-line-center($break-point, $item-padding, $marker-width, $marker-border-color, $tl-marker-border-hover-color, $marker-border-width, $line-width) {
+@mixin time-line-center($break-point, $item-padding, $marker-width, $marker-border-width, $line-width) {
     
 
     @if $break-point !=0 and $break-point !=null and $break-point !="" {

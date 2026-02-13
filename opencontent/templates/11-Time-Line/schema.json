@@ -68,6 +68,11 @@
         }
       }
     },
+    "Enabled": {
+      "title": "Enable Item",
+      "default": "true",
+      "type": "boolean"
+    },
     "SortIndex": {
       "title": "Sorting Order",
       "default": 999999,
